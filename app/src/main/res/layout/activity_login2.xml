@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg_whitw"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/kiitlogo"
+        android:src="@drawable/kiit_login_logo"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck,ImageContrastCheck,ImageContrastCheck" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/login_rectangle"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:elevation="5dp"
+        tools:targetApi="lollipop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/login_icon"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:contentDescription="@string/log_in"
+                android:src="@drawable/login_icon"
+                app:layout_constraintStart_toStartOf="@id/loginbg"
+                app:layout_constraintTop_toTopOf="@id/loginbg"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/pritxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/productsansbold"
+                android:text="@string/log_in"
+                android:textColor="@color/priCol"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/login_icon"
+                app:layout_constraintTop_toTopOf="@id/loginbg" />
+
+            <TextView
+                android:id="@+id/sectxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/productsansbold"
+                android:text="@string/to_get_started"
+                android:textColor="#807F7F"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/login_icon"
+                app:layout_constraintTop_toTopOf="@id/loginbg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login_custom_input"
+                android:hint="@string/email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="emailAddress"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="password"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPassword"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/login_button"
+            android:src="@drawable/login_button"
+            tools:ignore="RedundantDescriptionCheck" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/skip_login"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/skip_login"
+        android:src="@drawable/skip_login"
+        android:layout_marginTop="-10dp"/>
+
+
+
+
+</LinearLayout>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/drawable/white_gray_border_bottom.xml" value="0.240625" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/drawable/white_gray_border_tabs.xml" value="0.45703125" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/activity_login2.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/activity_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/cardview_notification.xml" value="0.10989583333333333" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_attendance.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_attendance2.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_home2.xml" value="0.67" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_notification.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_notification2.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/fragment_profile2.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/layout_bottom_navigation_view.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/layout_center_viewpager.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/layout_top_tabs.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/layout/sidemenu_header.xml" value="0.22447916666666667" />
+        <entry key="..\:/KIITappWithInstaClone/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.22447916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

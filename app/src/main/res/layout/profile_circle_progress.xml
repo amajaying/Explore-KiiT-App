@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/circularProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cpb_start_angle="0"
+        app:cpb_background_progressbar_color="#CFCFCF"
+        app:cpb_background_progressbar_width="8dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_background_progressbar_color_direction="right_to_left"
+        app:cpb_progressbar_color_start="@color/priCol"
+        app:cpb_progressbar_color_end="@color/secCol"
+        app:cpb_progressbar_width="8dp"
+        app:cpb_progress="75"
+        app:cpb_progress_max="100"
+        app:cpb_round_border="false"/>
+
+    <TextView
+        android:layout_centerInParent = "true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3d3d3d"
+        android:text="@string/_75"
+        android:textSize="22sp"
+        android:fontFamily="@font/productsansbold"/>
+
+</RelativeLayout>
