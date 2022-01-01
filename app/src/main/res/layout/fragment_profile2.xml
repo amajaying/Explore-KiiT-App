@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ProfileFragment"
+    tools:context=".fragments.ProfileFragment"
     android:background="#F6F5F5">
 
 
@@ -64,6 +64,9 @@
                 android:orientation="vertical"
                 android:layout_marginTop="-250dp">
 
+
+
+
                 <include layout="@layout/profile_pp_nam"
                     android:layout_marginTop="100dp"
                     android:layout_height="200dp"
@@ -81,6 +84,19 @@
                     android:layout_width="wrap_content"
                     android:layout_marginTop="15dp" />
 
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Logout"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#f5f6f6"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="50dp"
+                    android:textColor="#3d3d3d"/>
 
 <!--                Footer-->
 

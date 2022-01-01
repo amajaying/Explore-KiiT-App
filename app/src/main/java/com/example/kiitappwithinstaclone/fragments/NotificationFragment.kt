@@ -1,4 +1,4 @@
-package com.example.kiitappwithinstaclone.Fragments
+package com.example.kiitappwithinstaclone.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,17 +1,13 @@
 package com.example.kiitappwithinstaclone
 
-import android.content.Intent
-import android.net.wifi.hotspot2.pps.HomeSp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.kiitappwithinstaclone.Fragments.AttendanceFragment
-import com.example.kiitappwithinstaclone.Fragments.HomeFragment
-import com.example.kiitappwithinstaclone.Fragments.NotificationFragment
-import com.example.kiitappwithinstaclone.Fragments.ProfileFragment
+import com.example.kiitappwithinstaclone.fragments.AttendanceFragment
+import com.example.kiitappwithinstaclone.fragments.HomeFragment
+import com.example.kiitappwithinstaclone.fragments.NotificationFragment
+import com.example.kiitappwithinstaclone.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 
 class MainActivity : AppCompatActivity() {
 
