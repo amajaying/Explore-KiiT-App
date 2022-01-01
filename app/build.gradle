@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -37,7 +38,7 @@ android {
 }
 
 dependencies {
-
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
 
@@ -75,7 +76,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'androidx.appcompat:appcompat:1.4.0'
-
+    implementation 'com.google.firebase:firebase-analytics'
     implementation 'androidx.cardview:cardview:1.0.0'
 
 

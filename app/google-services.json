@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "181965627616",
+    "firebase_url": "https://appfinalkiit-default-rtdb.firebaseio.com",
+    "project_id": "appfinalkiit",
+    "storage_bucket": "appfinalkiit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181965627616:android:38286d7d16b8d302fdf085",
+        "android_client_info": {
+          "package_name": "com.example.appfinalkiit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181965627616-on2u5c21fjp80p1k7kgma7k0k16snci1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb2rCnblgze4x8GM1muTD_VZ8Z7IMlMeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181965627616-on2u5c21fjp80p1k7kgma7k0k16snci1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181965627616:android:7c255b3fdca223c2fdf085",
+        "android_client_info": {
+          "package_name": "com.example.kiitappwithinstaclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181965627616-on2u5c21fjp80p1k7kgma7k0k16snci1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb2rCnblgze4x8GM1muTD_VZ8Z7IMlMeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181965627616-on2u5c21fjp80p1k7kgma7k0k16snci1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
