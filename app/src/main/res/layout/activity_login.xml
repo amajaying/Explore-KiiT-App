@@ -133,9 +133,5 @@
         android:contentDescription="@string/skip_login"
         android:src="@drawable/skip_login"
         android:layout_marginTop="-10dp"/>
-
-
-
-
 </LinearLayout>
 
