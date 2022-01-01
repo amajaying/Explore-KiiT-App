@@ -92,11 +92,11 @@
                     android:text="Logout"
                     android:textSize="18sp"
                     android:textAllCaps="false"
-                    android:backgroundTint="#f5f6f6"
+                    android:backgroundTint="#3d3d3d"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_marginTop="50dp"
-                    android:textColor="#3d3d3d"/>
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/white"/>
 
 <!--                Footer-->
 
