@@ -74,19 +74,19 @@
 
 
                 <include layout="@layout/profile_info_part"
-                    android:layout_height="350dp"
+                    android:layout_height="280dp"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"/>
+                    android:layout_marginTop="15dp" />
 
-                <include layout="@layout/profile_info_part"
-                    android:layout_height="350dp"
+<!--                Footer-->
+
+                <include layout="@layout/footer"
+                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"/>
-
-
+                    android:layout_marginTop="15dp" />
             </LinearLayout>
+
+
 
         </LinearLayout>
 </ScrollView>

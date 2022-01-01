@@ -10,6 +10,6 @@
         android:endColor="@color/priCol" />
 
     <corners
-        android:topLeftRadius="180dp"/>
+        android:topLeftRadius="150dp"/>
 
 </shape>
