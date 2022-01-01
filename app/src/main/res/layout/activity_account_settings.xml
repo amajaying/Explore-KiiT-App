@@ -28,7 +28,7 @@
                     android:id="@+id/back_button"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginStart="-20dp"
+                    android:layout_marginStart="-27dp"
                     android:padding="20dp"
                     android:src="@drawable/left_arrow" />
 
@@ -103,7 +103,7 @@
         android:hint="@string/student_name"
         android:inputType="text"
         android:textColor="#3d3d3d"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editroll"
@@ -117,7 +117,7 @@
         android:hint="@string/roll_no"
         android:inputType="text"
         android:textColor="#3d3d3d"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
     <EditText
         android:id="@+id/editsem"
         android:layout_width="match_parent"
@@ -130,7 +130,7 @@
         android:hint="@string/semester_current"
         android:inputType="text"
         android:textColor="#3d3d3d"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editcontact"
@@ -144,7 +144,7 @@
         android:hint="@string/contact_no"
         android:inputType="text"
         android:textColor="#3d3d3d"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editaddress"
@@ -158,7 +158,7 @@
         android:hint="@string/address"
         android:inputType="text"
         android:textColor="#3d3d3d"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/saveChanges"
