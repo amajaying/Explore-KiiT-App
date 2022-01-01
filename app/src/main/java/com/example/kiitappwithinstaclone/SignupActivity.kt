@@ -54,13 +54,13 @@ class SignupActivity : AppCompatActivity() {
 
         val userMap = HashMap<String, Any>()
         userMap["uid"] = currentUserId
-        userMap["fullname"] = "Ajay Khatri Chhetri"
-        userMap["email"] = "amajaying@gmail.com"
-        userMap["phoneNo"] = "+9779867234454"
-        userMap["rollNo"] = "21053264"
-        userMap["address"] = "Tilottama, Nepal"
-        userMap["school"] = "CSE"
-        userMap["semester"] = "First Semester"
+        userMap["fullname"] = fullname
+        userMap["email"] = email
+        userMap["phoneNo"] = phoneNo
+        userMap["rollNo"] = rollNo
+        userMap["address"] = address
+        userMap["school"] = school
+        userMap["semester"] = semester
         userMap["image"] = "gs://appfinalkiit.appspot.com/Default Images/default_profile.jpg"
 
         usersRef.child(currentUserId).setValue(userMap)
