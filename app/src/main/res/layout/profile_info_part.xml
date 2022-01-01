@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="260dp"
+    android:layout_height="340dp"
     android:background="@color/white">
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansbold"
-                    android:text="Personal Details"
+                    android:text="@string/personal_details"
                     android:layout_marginTop="10dp"
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
@@ -168,6 +165,94 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansbold"
+                    android:text="@string/contact_no"
+                    android:textSize="18sp"
+                    android:textColor="#3d3d3d"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/contactNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/_977_9867234454"
+                    android:textSize="18sp"
+                    android:textColor="#3d3d3d"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/productsansbold"
+                    android:text="@string/address"
+                    android:textSize="18sp"
+                    android:textColor="#3d3d3d"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/tilottama_nepal"
+                    android:textSize="18sp"
+                    android:textColor="#3d3d3d"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/productsansbold"
                     android:text="@string/school"
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
@@ -213,8 +298,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansbold"
                     android:text="@string/semester_current"
-                    android:textSize="18sp"
-                    android:textColor="#3d3d3d"/>
+                    android:textColor="#3d3d3d"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -239,4 +324,3 @@
     </LinearLayout>
 
 </RelativeLayout>
-</LinearLayout>

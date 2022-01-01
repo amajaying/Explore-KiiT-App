@@ -59,5 +59,13 @@
     <string name="a_project_by_ajay_khatri">A Project by Ajay Khatri.</string>
     <string name="copyright_2021_all_rights_reserved">© Copyright 2021 - All Rights Reserved</string>
     <string name="notifications">Notifications</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="change_image">Change Image</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="_977_9867234454">+977 9867234454</string>
+    <string name="tilottama_nepal">Tilottama, Nepal</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="address">Address</string>
+    <string name="student_name">Student Name</string>
 
 </resources>

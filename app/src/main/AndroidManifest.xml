@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITappWithInstaClone">
         <activity
+            android:name=".AccountSettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

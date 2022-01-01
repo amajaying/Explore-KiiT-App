@@ -77,9 +77,10 @@
 
 
                 <include layout="@layout/profile_info_part"
-                    android:layout_height="280dp"
+                    android:layout_height="300dp"
                     android:layout_width="wrap_content"
                     android:layout_marginTop="15dp" />
+
 
 <!--                Footer-->
 

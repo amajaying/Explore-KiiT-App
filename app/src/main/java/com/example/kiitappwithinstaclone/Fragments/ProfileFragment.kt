@@ -1,11 +1,14 @@
 package com.example.kiitappwithinstaclone.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kiitappwithinstaclone.AccountSettingsActivity
 import com.example.kiitappwithinstaclone.R
+import kotlinx.android.synthetic.main.profile_info_part.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +38,13 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile2, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile2, container, false)
+
+        view.edit_profile.setOnClickListener{
+            startActivity(Intent(context,AccountSettingsActivity::class.java))
+        }
+
+        return view
     }
 
     companion object {

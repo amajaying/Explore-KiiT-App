@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountSettingsActivity">
+
+<!--    App Bar-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/accsettings_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/white_gray_border_tabs">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/left_arrow"/>
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/productsansbold"
+                    android:text="Edit Profile"
+                    android:textColor="#3d3d3d"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/tick_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/tick_icon"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    Profile Image-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edit_profile_pp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="100dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/appBarLayout">
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/default_profile"
+        android:layout_centerHorizontal="true"
+       />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/changeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/change_image"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/edit_profile_pp"
+        android:fontFamily="@font/productsansbold"
+        android:textColor="@color/secCol"
+        android:textSize="16sp"
+        />
+
+
+    <EditText
+        android:id="@+id/editname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/changeImage"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:hint="@string/student_name"
+        android:fontFamily="@font/productsansregular"
+        android:textSize="16sp"/>
+
+
+
+</RelativeLayout>
