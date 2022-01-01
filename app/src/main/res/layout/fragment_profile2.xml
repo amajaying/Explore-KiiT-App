@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment"
     android:background="#F6F5F5">
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/productsansbold"
-                    android:text="Profile"
+                    android:text="@string/profile"
                     android:textColor="#3d3d3d"
                     android:textSize="20sp" />
 
@@ -35,44 +37,59 @@
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/appBarLayout">
-        <ImageView
-            android:id="@+id/profile_bg"
-            android:layout_width="match_parent"
-            android:layout_height="234dp"
-            android:contentDescription="@string/profile_bg"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile_bg"
-            />
-
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/profile_pp_nam"
-                android:layout_marginTop="100dp"
-                android:layout_height="200dp"
-                android:layout_width="match_parent"/>
+            <ImageView
+                android:id="@+id/profile_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="234dp"
+                android:contentDescription="@string/profile_bg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_bg"
+                tools:ignore="ImageContrastCheck" />
 
-            <include layout="@layout/profile_attd_stats"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="-250dp">
 
-                android:layout_width="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_height="140dp" />
+                <include layout="@layout/profile_pp_nam"
+                    android:layout_marginTop="100dp"
+                    android:layout_height="200dp"
+                    android:layout_width="wrap_content"/>
+
+                <include layout="@layout/profile_attd_stats"
+
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="140dp" />
 
 
-            <include layout="@layout/profile_info_part"
-                android:layout_height="200dp"
-                android:layout_width="match_parent"
-                android:layout_marginTop="15dp"/>
+                <include layout="@layout/profile_info_part"
+                    android:layout_height="350dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"/>
+
+                <include layout="@layout/profile_info_part"
+                    android:layout_height="350dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"/>
 
 
+            </LinearLayout>
 
         </LinearLayout>
-    </FrameLayout>
+</ScrollView>
+
 
 </RelativeLayout>
