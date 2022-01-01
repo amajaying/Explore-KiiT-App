@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/login_background.xml" value="0.23697916666666666" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/cardview_notification.xml" value="0.22447916666666667" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/footer.xml" value="0.22083333333333333" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_notification2.xml" value="0.22447916666666667" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_profile2.xml" value="0.22083333333333333" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/layout_bottom_navigation_view.xml" value="0.22083333333333333" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/layout_center_viewpager.xml" value="0.22083333333333333" />
