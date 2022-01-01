@@ -54,18 +54,19 @@
     <string name="_1st_stage">1st Stage</string>
     <string name="notiTitle">Winter Vacation</string>
     <string name="notiDetail">It is to be notified that winter vacation from Dec 21 to Jan2 is provided to the students.</string>
-    <string name="edit_profile">Edit Profile</string>
     <string name="profile">Profile</string>
     <string name="a_project_by_ajay_khatri">A Project by Ajay Khatri.</string>
     <string name="copyright_2021_all_rights_reserved">© Copyright 2021 - All Rights Reserved</string>
     <string name="notifications">Notifications</string>
-    <string name="personal_details">Personal Details</string>
     <string name="change_image">Change Image</string>
     <string name="contact_no">Contact No.</string>
     <string name="_977_9867234454">+977 9867234454</string>
     <string name="tilottama_nepal">Tilottama, Nepal</string>
     <string name="personal_details">Personal Details</string>
     <string name="address">Address</string>
-    <string name="student_name">Student Name</string>
+    <string name="go_to_kiit_portal">Go to KiiT Portal</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="edit_profile">Edit</string>
+
 
 </resources>

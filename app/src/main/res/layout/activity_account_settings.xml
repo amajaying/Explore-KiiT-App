@@ -26,9 +26,9 @@
 
                 <ImageView
                     android:id="@+id/back_button"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/left_arrow"/>
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/left_arrow" />
 
                 <TextView
                     android:id="@+id/header"
@@ -36,17 +36,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/productsansbold"
-                    android:text="Edit Profile"
+                    android:text="@string/edit_profile"
                     android:textColor="#3d3d3d"
                     android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/tick_button"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/tick_icon"
-                    android:layout_alignParentEnd="true"/>
-
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
@@ -61,7 +53,7 @@
         android:layout_centerHorizontal="true"
         android:innerRadius="0dp"
         android:shape="ring"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_below="@id/appBarLayout">
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:layout_width="match_parent"
@@ -71,32 +63,128 @@
        />
 
     </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/changeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/change_image"
-        android:layout_marginTop="6dp"
         android:layout_below="@id/edit_profile_pp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/productsansbold"
+        android:text="@string/change_image"
+        android:textAlignment="center"
         android:textColor="@color/secCol"
-        android:textSize="16sp"
-        />
+        android:textSize="16sp" />
 
+
+    <TextView
+        android:id="@+id/personalDetailsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeImage"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/productsansbold"
+        android:text="@string/personal_details"
+        android:textColor="@color/priCol"
+        android:textSize="22sp" />
 
     <EditText
         android:id="@+id/editname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/changeImage"
-        android:layout_marginRight="20dp"
+        android:layout_below="@id/personalDetailsText"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:inputType="text"
-        android:hint="@string/student_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/productsansregular"
-        android:textSize="16sp"/>
+        android:hint="@string/student_name"
+        android:inputType="text"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/productsansregular"
+        android:hint="@string/roll_no"
+        android:inputType="text"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp" />
+    <EditText
+        android:id="@+id/editsem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editroll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/productsansregular"
+        android:hint="@string/semester_current"
+        android:inputType="text"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editsem"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/productsansregular"
+        android:hint="@string/contact_no"
+        android:inputType="text"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editcontact"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/productsansregular"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:textColor="#3d3d3d"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/saveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/editaddress"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/save_changes"
+        android:textSize="18sp"
+        android:fontFamily="@font/productsansregular"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/gotoPortal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/saveChanges"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#787878"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/go_to_kiit_portal"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
 
 
 

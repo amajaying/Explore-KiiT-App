@@ -16,7 +16,8 @@
             android:paddingStart="30dp"
             android:paddingTop="15dp"
             android:paddingEnd="30dp"
-            android:paddingBottom="5dp">
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="15dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -44,16 +45,16 @@
                 android:orientation="horizontal"
                 android:padding="5dp">
 
-                <Button
+                <TextView
                     android:id="@+id/edit_profile"
                     android:layout_width="wrap_content"
-                    android:backgroundTint="@color/priCol"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
                     android:layout_height="wrap_content"
-                    android:text="@string/edit_profile"
-
-                    android:visibility="visible" />
+                    android:fontFamily="@font/productsansbold"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/secCol"
+                    android:text="@string/edit_profile" />
 
             </LinearLayout>
         </RelativeLayout>

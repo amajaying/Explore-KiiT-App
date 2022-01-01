@@ -15,9 +15,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavig
 
 class MainActivity : AppCompatActivity() {
 
-
-
-
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.home -> {
