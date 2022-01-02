@@ -79,7 +79,9 @@
                     android:layout_height="140dp" />
 
 
-                <include layout="@layout/profile_info_part"
+                <include
+                    android:id="profileInfo"
+                    layout="@layout/profile_info_part"
                     android:layout_height="350dp"
                     android:layout_width="wrap_content"
                     android:layout_marginTop="15dp" />

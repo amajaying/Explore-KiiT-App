@@ -1,5 +1,6 @@
 package com.example.kiitappwithinstaclone.fragments
 
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +11,12 @@ import com.example.kiitappwithinstaclone.AccountSettingsActivity
 import com.example.kiitappwithinstaclone.LoginActivity
 import com.example.kiitappwithinstaclone.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.core.Context
 import kotlinx.android.synthetic.main.fragment_profile2.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.*
 
@@ -24,6 +31,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ProfileFragment : Fragment() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -46,6 +56,10 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile2, container, false)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+        loadUserInfo()
+
+
         view.edit_profile.setOnClickListener{
             startActivity(Intent(context,AccountSettingsActivity::class.java))
         }
@@ -57,10 +71,26 @@ class ProfileFragment : Fragment() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
+
+
         return view
 
 
 
+    }
+
+    private fun loadUserInfo() {
+        val ref =FirebaseDatabase.getInstance().getReference("Users")
+        ref.child(firebaseAuth.uid!!)
+            .addValueEventListener(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
     }
 
     companion object {
