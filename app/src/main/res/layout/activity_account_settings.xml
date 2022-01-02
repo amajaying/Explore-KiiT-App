@@ -48,7 +48,7 @@
 
 <!--    Profile Image-->
     <androidx.cardview.widget.CardView
-        android:id="@+id/edit_profile_pp"
+
         android:layout_width="120dp"
         android:layout_height="120dp"
         app:cardCornerRadius="100dp"
@@ -58,6 +58,7 @@
         android:layout_marginTop="25dp"
         android:layout_below="@id/appBarLayout">
     <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/edit_profile_pp"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:src="@drawable/default_profile"
@@ -168,10 +169,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="@string/save_changes"
-        android:textSize="18sp"
         android:fontFamily="@font/productsansregular"
-        android:textAllCaps="false"/>
+        android:text="@string/save_changes"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/gotoPortal"

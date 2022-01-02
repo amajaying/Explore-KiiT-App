@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.kiitappwithinstaclone.AccountSettingsActivity
 import com.example.kiitappwithinstaclone.LoginActivity
 import com.example.kiitappwithinstaclone.R
@@ -17,8 +18,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.core.Context
+import kotlinx.android.synthetic.main.activity_login.view.*
+import kotlinx.android.synthetic.main.activity_signup.view.*
 import kotlinx.android.synthetic.main.fragment_profile2.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.*
+import kotlinx.android.synthetic.main.profile_info_part.view.address
+import kotlinx.android.synthetic.main.profile_pp_nam.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -84,6 +89,35 @@ class ProfileFragment : Fragment() {
         ref.child(firebaseAuth.uid!!)
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
+                    val address = "${snapshot.child("address").value}"
+                    val email = "${snapshot.child("email").value}"
+                    val fullname = "${snapshot.child("address").value}"
+                    val image = "${snapshot.child("image").value}"
+                    val phoneNo = "${snapshot.child("phoneNo").value}"
+                    val rollNo = "${snapshot.child("rollNo").value}"
+                    val school = "${snapshot.child("school").value}"
+                    val semester = "${snapshot.child("semester").value}"
+                    val uid = "${snapshot.child("uid").value}"
+
+                    //set Data
+
+                    view!!.student_name.text = fullname
+                    view!!.roll_no.text = rollNo
+                    view!!.address.text = address
+                    view!!.contactNo.text = phoneNo
+                    view!!.schoolinfo.text = school
+                    view!!.semester.text = semester
+
+                    //settingimage
+                    try {
+                        Glide.with(this@ProfileFragment)
+                            .load(image)
+                            .placeholder(R.drawable.default_profile)
+                            .into(view!!.profileImg)
+                    }
+                    catch (e: Exception){
+
+                    }
 
                 }
 

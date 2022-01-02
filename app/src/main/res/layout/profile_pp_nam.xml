@@ -11,37 +11,39 @@
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="10dp"
             android:layout_marginTop="50dp"
-            android:background="@drawable/profile_bg_top">
+            android:background="@drawable/profile_bg_top"
+            android:elevation="10dp">
+
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginTop="70dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ajay_khatri_chhetri"
-                    android:fontFamily="@font/productsansbold"
                     android:layout_gravity="center"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:fontFamily="@font/productsansbold"
+                    android:text="@string/ajay_khatri_chhetri"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/semester"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/first_year_student"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/first_year_student"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/productsansregular"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -49,6 +51,7 @@
 
     </RelativeLayout>
     <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/profileImg"
         android:layout_width="105dp"
         android:layout_height="105dp"
         android:src="@drawable/profile_pp"
