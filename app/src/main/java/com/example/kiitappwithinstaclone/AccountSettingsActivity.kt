@@ -1,5 +1,6 @@
 package com.example.kiitappwithinstaclone
 
+import android.app.Activity
 import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -142,7 +143,16 @@ class AccountSettingsActivity : AppCompatActivity() {
     private var cameraActivityResultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult(),
         ActivityResultCallback<ActivityResult> {result ->
+            if(result.resultCode == Activity.RESULT_OK){
+                val data =result.data
+                imageUri = data!!.data
 
+
+                 binding.changeImage.setImageURI(imageUri)
+            }
+            else{
+                
+            }
         }
     )
 }

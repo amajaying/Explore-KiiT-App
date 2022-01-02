@@ -48,7 +48,7 @@
 
 <!--    Profile Image-->
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/editpp"
         android:layout_width="120dp"
         android:layout_height="120dp"
         app:cardCornerRadius="100dp"
@@ -71,7 +71,7 @@
         android:id="@+id/changeImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_profile_pp"
+        android:layout_below="@id/editpp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/productsansbold"
         android:text="@string/change_image"
