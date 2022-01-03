@@ -24,8 +24,6 @@ import kotlinx.android.synthetic.main.fragment_profile2.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.address
 import kotlinx.android.synthetic.main.profile_pp_nam.view.*
-import kotlinx.android.synthetic.main.profile_info_part.view.semester as semester1
-import kotlinx.android.synthetic.main.profile_pp_nam.view.student_name as student_name1
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -84,27 +82,27 @@ class ProfileFragment : Fragment() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val address = "${snapshot.child("address").value}"
-                    val email = "${snapshot.child("email").value}"
+//                    val email = "${snapshot.child("email").value}"
                     val fullname = "${snapshot.child("fullname").value}"
                     val image = "${snapshot.child("image").value}"
                     val phoneNo = "${snapshot.child("phoneNo").value}"
                     val rollNo = "${snapshot.child("rollNo").value}"
                     val school = "${snapshot.child("school").value}"
                     val semester = "${snapshot.child("semester").value}"
-                    val uid = "${snapshot.child("uid").value}"
+//                    val uid = "${snapshot.child("uid").value}"
 
                     //set Data
 
-                    view!!.student_name.text = fullname
+                    view!!.student_name1.text = fullname
                     view!!.student_name.text = fullname
                     view!!.roll_no.text = rollNo
                     view!!.address.text = address
                     view!!.contactNo.text = phoneNo
                     view!!.schoolinfo.text = school
                     view!!.semester.text = semester
-                    view!!.semester.text = semester
+                    view!!.semester1.text = semester
 
-                    //settingimage
+                    //setting image
                     try {
                         Glide.with(this@ProfileFragment)
                             .load(image)
@@ -133,13 +131,5 @@ class ProfileFragment : Fragment() {
          * @return A new instance of fragment ProfileFragment.
          */
         // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
