@@ -1,6 +1,7 @@
 package com.example.kiitappwithinstaclone
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.net.Uri
 import android.provider.MediaStore
 import android.view.Menu
 import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,12 +21,13 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.profile_info_part.view.*
 import kotlinx.android.synthetic.main.profile_pp_nam.view.*
 
 
 class AccountSettingsActivity : AppCompatActivity() {
-
+    //binding
     private lateinit var binding: ActivityAccountSettingsBinding
 
     //firebase auth
@@ -33,16 +36,28 @@ class AccountSettingsActivity : AppCompatActivity() {
     //Image uri
     private var imageUri:Uri?=null
 
+    //progress dialog
+    private lateinit var progressDialog: ProgressDialog
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAccountSettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //setting up Progress Dialog
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Please Wait!")
+        progressDialog.setCanceledOnTouchOutside(false)
+
+
+        //for firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
         loadUserInfo()
 
 
         binding.saveChanges.setOnClickListener {
+            validateData()
 
         }
 
@@ -60,6 +75,41 @@ class AccountSettingsActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }
+    }
+
+    private var name = ""
+    private fun validateData(){
+        name = binding.editname.text.toString().trim()
+
+        if (name.isEmpty()){
+            Toast.makeText(this, "Enter Name", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            if (imageUri==null){
+                updateProfile("")
+            }
+            else{
+                uploadImage()
+            }
+
+        }
+    }
+
+    private fun uploadImage() {
+        progressDialog.setMessage("Uploading profile picture")
+        progressDialog.show()
+
+        val filePathAndName = "ProfileImages/"+firebaseAuth.uid
+
+        val reference = FirebaseStorage.getInstance().getReference(filePathAndName)
+        reference.putFile(imageUri)
+            .addOnSuccessListener{
+
+            }
+    }
+
+    private fun updateProfile(uploadedImageUrl: String) {
+
     }
 
     private fun loadUserInfo() {
@@ -125,6 +175,9 @@ class AccountSettingsActivity : AppCompatActivity() {
     }
 
     private fun pickImageGallery() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        galleryActivityResultLauncher.launch(intent)
 
     }
 
@@ -137,7 +190,7 @@ class AccountSettingsActivity : AppCompatActivity() {
 
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
-        cam
+        cameraActivityResultLauncher.launch(intent)
     }
 
     private var cameraActivityResultLauncher = registerForActivityResult(
@@ -145,13 +198,29 @@ class AccountSettingsActivity : AppCompatActivity() {
         ActivityResultCallback<ActivityResult> {result ->
             if(result.resultCode == Activity.RESULT_OK){
                 val data =result.data
+
+
+
+                binding.editProfilePp.setImageURI(imageUri)
+            }
+            else{
+                Toast.makeText(this,"Cancelled", Toast.LENGTH_SHORT).show()
+            }
+        }
+    )
+
+    private var galleryActivityResultLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult(),
+        ActivityResultCallback<ActivityResult> {result ->
+            if(result.resultCode == Activity.RESULT_OK){
+                val data =result.data
                 imageUri = data!!.data
 
 
-                 binding.changeImage.setImageURI(imageUri)
+                binding.editProfilePp.setImageURI(imageUri)
             }
             else{
-                
+                Toast.makeText(this,"Cancelled", Toast.LENGTH_SHORT).show()
             }
         }
     )
