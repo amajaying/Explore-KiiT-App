@@ -82,14 +82,14 @@ class ProfileFragment : Fragment() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val address = "${snapshot.child("address").value}"
-//                    val email = "${snapshot.child("email").value}"
+                    val email = "${snapshot.child("email").value}"
                     val fullname = "${snapshot.child("fullname").value}"
                     val image = "${snapshot.child("image").value}"
                     val phoneNo = "${snapshot.child("phoneNo").value}"
                     val rollNo = "${snapshot.child("rollNo").value}"
                     val school = "${snapshot.child("school").value}"
                     val semester = "${snapshot.child("semester").value}"
-//                    val uid = "${snapshot.child("uid").value}"
+                    val uid = "${snapshot.child("uid").value}"
 
                     //set Data
 
@@ -131,5 +131,13 @@ class ProfileFragment : Fragment() {
          * @return A new instance of fragment ProfileFragment.
          */
         // TODO: Rename and change types and number of parameters
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            ProfileFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
     }
 }

@@ -281,6 +281,7 @@ class AccountSettingsActivity : AppCompatActivity() {
 
 
             binding.editProfilePp.setImageURI(imageUri)
+
         } else {
             Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
         }
