@@ -80,7 +80,7 @@
 
 
                 <include
-                    android:id="profileInfo"
+                    android:id="@+id/profileInfo"
                     layout="@layout/profile_info_part"
                     android:layout_height="350dp"
                     android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
                     android:id="@+id/logout"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Logout"
+                    android:text="@string/logout1"
                     android:textSize="18sp"
                     android:textAllCaps="false"
                     android:backgroundTint="#3d3d3d"

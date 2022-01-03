@@ -67,6 +67,7 @@
     <string name="go_to_kiit_portal">Go to KiiT Portal</string>
     <string name="save_changes">Save Changes</string>
     <string name="edit_profile">Edit</string>
+    <string name="logout1">Logout</string>
 
 
 </resources>

@@ -16,12 +16,15 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.FirebaseStorage.*
+import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.profile_info_part.view.*
 import kotlinx.android.synthetic.main.profile_pp_nam.view.*
 
@@ -34,7 +37,7 @@ class AccountSettingsActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
 
     //Image uri
-    private var imageUri:Uri?=null
+    private var imageUri: Uri? = null
 
     //progress dialog
     private lateinit var progressDialog: ProgressDialog
@@ -78,12 +81,39 @@ class AccountSettingsActivity : AppCompatActivity() {
     }
 
     private var name = ""
+    private var roll = ""
+    private var sem = ""
+    private var contact = ""
+    private var address = ""
+
     private fun validateData(){
         name = binding.editname.text.toString().trim()
+        roll = binding.editroll.text.toString().trim()
+        sem = binding.editsem.text.toString().trim()
+        contact = binding.editcontact.text.toString().trim()
+        address = binding.editaddress.text.toString().trim()
 
         if (name.isEmpty()){
-            Toast.makeText(this, "Enter Name", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Enter Full Name", Toast.LENGTH_SHORT).show()
         }
+
+        else if (roll.isEmpty()){
+            Toast.makeText(this, "Enter Roll No.", Toast.LENGTH_SHORT).show()
+        }
+
+        else if (sem.isEmpty()){
+            Toast.makeText(this, "Enter current Semester", Toast.LENGTH_SHORT).show()
+        }
+
+        else if (contact.isEmpty()){
+            Toast.makeText(this, "Enter Contact No.", Toast.LENGTH_SHORT).show()
+        }
+
+        else if (address.isEmpty()){
+            Toast.makeText(this, "Enter Address", Toast.LENGTH_SHORT).show()
+        }
+
+
         else{
             if (imageUri==null){
                 updateProfile("")
@@ -101,15 +131,46 @@ class AccountSettingsActivity : AppCompatActivity() {
 
         val filePathAndName = "ProfileImages/"+firebaseAuth.uid
 
-        val reference = FirebaseStorage.getInstance().getReference(filePathAndName)
-        reference.putFile(imageUri)
-            .addOnSuccessListener{
+        val reference = getInstance().getReference(filePathAndName)
+        reference.putFile(imageUri!!)
+            .addOnSuccessListener{ taskSnapshot ->
+                val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
+                while (!uriTask.isSuccessful);
+                val uploadedImageUrl = "${uriTask.result}"
 
+                updateProfile(uploadedImageUrl)
+
+            }
+            .addOnFailureListener{e ->
+                progressDialog.dismiss()
+                Toast.makeText(this, "Failed to upload image due to ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 
     private fun updateProfile(uploadedImageUrl: String) {
+        progressDialog.setMessage("Saving Changes...")
 
+        val hashmap: HashMap<String, Any> = HashMap()
+        hashmap["fullname"] = "$name"
+        hashmap["rollNo"] = "$roll"
+        hashmap["semester"] = "$sem"
+        hashmap["phoneNo"] = "$contact"
+        hashmap["address"] = "$address"
+        if (imageUri!=null){
+            hashmap["image"] = uploadedImageUrl
+        }
+
+        val reference = FirebaseDatabase.getInstance().getReference("Users")
+        reference.child(firebaseAuth.uid!!)
+            .updateChildren(hashmap)
+            .addOnSuccessListener {
+                progressDialog.dismiss()
+                Toast.makeText(this, "Profile Updated!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {e->
+                progressDialog.dismiss()
+                Toast.makeText(this, "Failed to update profile due to ${e.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 
     private fun loadUserInfo() {
