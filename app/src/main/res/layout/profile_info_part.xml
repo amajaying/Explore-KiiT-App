@@ -312,12 +312,13 @@
                 android:padding="5dp">
 
                 <TextView
+                    android:id="@+id/semester"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
                     android:text="@string/_1st_stage"
-                    android:textSize="18sp"
-                    android:textColor="#3d3d3d"/>
+                    android:textColor="#3d3d3d"
+                    android:textSize="18sp" />
             </LinearLayout>
         </RelativeLayout>
 

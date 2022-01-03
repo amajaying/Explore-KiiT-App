@@ -24,6 +24,8 @@ import kotlinx.android.synthetic.main.fragment_profile2.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.address
 import kotlinx.android.synthetic.main.profile_pp_nam.view.*
+import kotlinx.android.synthetic.main.profile_info_part.view.semester as semester1
+import kotlinx.android.synthetic.main.profile_pp_nam.view.student_name as student_name1
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -94,10 +96,12 @@ class ProfileFragment : Fragment() {
                     //set Data
 
                     view!!.student_name.text = fullname
+                    view!!.student_name.text = fullname
                     view!!.roll_no.text = rollNo
                     view!!.address.text = address
                     view!!.contactNo.text = phoneNo
                     view!!.schoolinfo.text = school
+                    view!!.semester.text = semester
                     view!!.semester.text = semester
 
                     //settingimage

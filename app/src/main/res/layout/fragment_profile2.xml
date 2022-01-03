@@ -55,8 +55,7 @@
                 android:layout_height="234dp"
                 android:contentDescription="@string/profile_bg"
                 android:scaleType="centerCrop"
-                android:src="@drawable/profile_bg"
-                tools:ignore="ImageContrastCheck" />
+                android:src="@drawable/profile_bg" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

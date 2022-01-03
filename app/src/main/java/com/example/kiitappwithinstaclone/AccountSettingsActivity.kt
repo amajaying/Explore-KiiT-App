@@ -22,7 +22,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.FirebaseStorage.*
 import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.profile_info_part.view.*
@@ -135,7 +134,7 @@ class AccountSettingsActivity : AppCompatActivity() {
         reference.putFile(imageUri!!)
             .addOnSuccessListener{ taskSnapshot ->
                 val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
-                while (!uriTask.isSuccessful);
+//                while (!uriTask.isSuccessful);
                 val uploadedImageUrl = "${uriTask.result}"
 
                 updateProfile(uploadedImageUrl)
@@ -151,11 +150,11 @@ class AccountSettingsActivity : AppCompatActivity() {
         progressDialog.setMessage("Saving Changes...")
 
         val hashmap: HashMap<String, Any> = HashMap()
-        hashmap["fullname"] = "$name"
-        hashmap["rollNo"] = "$roll"
-        hashmap["semester"] = "$sem"
-        hashmap["phoneNo"] = "$contact"
-        hashmap["address"] = "$address"
+        hashmap["fullname"] = name
+        hashmap["rollNo"] = roll
+        hashmap["semester"] = sem
+        hashmap["phoneNo"] = contact
+        hashmap["address"] = address
         if (imageUri!=null){
             hashmap["image"] = uploadedImageUrl
         }
@@ -183,7 +182,7 @@ class AccountSettingsActivity : AppCompatActivity() {
                     val image = "${snapshot.child("image").value}"
                     val phoneNo = "${snapshot.child("phoneNo").value}"
                     val rollNo = "${snapshot.child("rollNo").value}"
-                    val school = "${snapshot.child("school").value}"
+//                    val school = "${snapshot.child("school").value}"
                     val semester = "${snapshot.child("semester").value}"
 
                     //set Data
@@ -274,18 +273,16 @@ class AccountSettingsActivity : AppCompatActivity() {
     )
 
     private var galleryActivityResultLauncher = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult(),
-        ActivityResultCallback<ActivityResult> {result ->
-            if(result.resultCode == Activity.RESULT_OK){
-                val data =result.data
-                imageUri = data!!.data
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data = result.data
+            imageUri = data!!.data
 
 
-                binding.editProfilePp.setImageURI(imageUri)
-            }
-            else{
-                Toast.makeText(this,"Cancelled", Toast.LENGTH_SHORT).show()
-            }
+            binding.editProfilePp.setImageURI(imageUri)
+        } else {
+            Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
         }
-    )
+    }
 }
