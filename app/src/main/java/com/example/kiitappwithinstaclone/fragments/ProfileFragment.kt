@@ -25,16 +25,9 @@ import kotlinx.android.synthetic.main.profile_info_part.view.*
 import kotlinx.android.synthetic.main.profile_info_part.view.address
 import kotlinx.android.synthetic.main.profile_pp_nam.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
@@ -47,8 +40,6 @@ class ProfileFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
-
         }
     }
 
@@ -71,6 +62,7 @@ class ProfileFragment : Fragment() {
 
         view.logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
+
 
             val intent = Intent(context, LoginActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
