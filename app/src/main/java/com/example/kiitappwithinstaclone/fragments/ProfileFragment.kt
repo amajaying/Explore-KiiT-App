@@ -83,7 +83,7 @@ class ProfileFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val address = "${snapshot.child("address").value}"
                     val email = "${snapshot.child("email").value}"
-                    val fullname = "${snapshot.child("address").value}"
+                    val fullname = "${snapshot.child("fullname").value}"
                     val image = "${snapshot.child("image").value}"
                     val phoneNo = "${snapshot.child("phoneNo").value}"
                     val rollNo = "${snapshot.child("rollNo").value}"

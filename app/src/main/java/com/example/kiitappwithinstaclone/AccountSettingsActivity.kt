@@ -179,7 +179,7 @@ class AccountSettingsActivity : AppCompatActivity() {
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val address = "${snapshot.child("address").value}"
-                    val fullname = "${snapshot.child("address").value}"
+                    val fullname = "${snapshot.child("fullname").value}"
                     val image = "${snapshot.child("image").value}"
                     val phoneNo = "${snapshot.child("phoneNo").value}"
                     val rollNo = "${snapshot.child("rollNo").value}"
@@ -189,7 +189,10 @@ class AccountSettingsActivity : AppCompatActivity() {
                     //set Data
 
                    binding.editname.setText(fullname)
-                   binding.editname.setText(fullname)
+                   binding.editaddress.setText(address)
+                   binding.editcontact.setText(phoneNo)
+                   binding.editroll.setText(rollNo)
+                   binding.editsem.setText(semester)
 
                     //settingimage
                     try {
