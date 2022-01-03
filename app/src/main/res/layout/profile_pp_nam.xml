@@ -50,11 +50,22 @@
         </RelativeLayout>
 
     </RelativeLayout>
-    <androidx.constraintlayout.utils.widget.ImageFilterView
+    <androidx.cardview.widget.CardView
         android:id="@+id/profileImg"
         android:layout_width="105dp"
         android:layout_height="105dp"
+        app:cardCornerRadius="100dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        >
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/profileImg1"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
         android:src="@drawable/profile_pp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        />
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

@@ -105,7 +105,7 @@ class ProfileFragment : Fragment() {
                         Glide.with(this@ProfileFragment)
                             .load(image)
                             .placeholder(R.drawable.default_profile)
-                            .into(view!!.profileImg)
+                            .into(view!!.profileImg1)
                     }
                     catch (e: Exception){
 
