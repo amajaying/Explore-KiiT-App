@@ -38,12 +38,9 @@ class SocietiesActivity : AppCompatActivity() {
         dbref.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
-                    for(societySnapshot in snapshot.children){
+                    for(dataSnapshot in snapshot.children){
 
-                        val society = societySnapshot.getValue(Society::class.java)
-                        societyArrayList.add(society!!)
                     }
-                    societyRecyclerView.adapter = SocietyAdapter(this@SocietiesActivity,societyArrayList)
                 }
             }
 
