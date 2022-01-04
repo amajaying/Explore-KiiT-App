@@ -26,8 +26,9 @@
                     android:id="@+id/headlogo"
                     android:layout_width="280dp"
                     android:layout_height="50dp"
+                    android:layout_centerInParent="true"
                     android:src="@drawable/home_kiit_logo"
-                    android:layout_centerInParent="true" />
+                    tools:ignore="ImageContrastCheck" />
 
                 <ImageView
                     android:id="@+id/sideMenu"
@@ -89,7 +90,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="28dp"
                             android:fontFamily="@font/productsansregular"
-                            android:text="Want a"
+                            android:text="@string/want_a"
                             android:textColor="#3d3d3d"
                             android:textSize="20sp" />
 
@@ -98,7 +99,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:fontFamily="@font/productsansbold"
-                            android:text="Virtual Tour?"
+                            android:text="@string/virtual_tour"
                             android:textColor="@color/priCol"
 
                             android:textSize="26sp" />
@@ -111,7 +112,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="32dp"
                         android:layout_marginEnd="30dp"
-                        android:src="@drawable/click_here" />
+                        android:src="@drawable/click_here"
+                        tools:ignore="ImageContrastCheck" />
 
                 </RelativeLayout>
 
@@ -168,7 +170,8 @@
                                     android:layout_width="55dp"
                                     android:layout_height="24dp"
                                     android:fontFamily="@font/productsansbold"
-                                    android:src="@drawable/view_all_icon" />
+                                    android:src="@drawable/view_all_icon"
+                                    tools:ignore="ImageContrastCheck" />
                             </LinearLayout>
                         </RelativeLayout>
 
@@ -195,7 +198,8 @@
                                     android:fontFamily="@font/productsansbold"
                                     android:text="@string/_1st_international_conference_on_smart_technology_for_power_and_green_energy_stpge_2022"
                                     android:textColor="@color/white"
-                                    android:textSize="18sp" />
+                                    android:textSize="18sp"
+                                    tools:ignore="TextContrastCheck" />
                             </LinearLayout>
                         </RelativeLayout>
 
@@ -203,7 +207,6 @@
                             android:id="@+id/eventaddress"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/eventname"
                             android:layout_marginStart="5dp"
                             android:layout_marginBottom="5dp">
 
@@ -255,7 +258,8 @@
                                     android:fontFamily="@font/productsansregular"
                                     android:text="@string/january_21_2022_to_january_22_2022"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp" />
+                                    android:textSize="15sp"
+                                    tools:ignore="TextContrastCheck" />
                             </LinearLayout>
                         </RelativeLayout>
 

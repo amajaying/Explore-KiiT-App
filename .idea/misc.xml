@@ -12,12 +12,13 @@
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_no_login.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_signup.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_societies.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_splash.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/cardview_notification.xml" value="0.22447916666666667" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/events_layout.xml" value="0.25" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/footer.xml" value="0.22083333333333333" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_home.xml" value="0.14560810810810812" />
-        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_home2.xml" value="0.22" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_home2.xml" value="0.1" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_no_login_home.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_notification2.xml" value="0.22447916666666667" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/fragment_profile2.xml" value="0.22083333333333333" />
@@ -25,6 +26,7 @@
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/layout_center_viewpager.xml" value="0.22083333333333333" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/profile_info_part.xml" value="0.22083333333333333" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/profile_pp_nam.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/soc_row_category.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/societies_list_page.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/menu/nologinmenubottom.xml" value="0.1" />

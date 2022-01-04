@@ -77,12 +77,20 @@ class HomeFragment : Fragment() {
         }
         //Virtual Button Finish
 
+
+        //Recent Events: view all
         binding.viewallbtn.setOnClickListener{
             val uri = Uri.parse("https://kiit.ac.in/events/")
 
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
         }
+
+
+        // Home Menu Linking
+
+
+
 
         return binding.root
     }
