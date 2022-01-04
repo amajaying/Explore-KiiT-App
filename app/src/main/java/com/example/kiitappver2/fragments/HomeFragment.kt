@@ -10,14 +10,8 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.kiitappver2.LoginActivity
 import com.example.kiitappver2.SocietiesActivity
-import com.example.kiitappver2.SocietyAdapterCategory
-import com.example.kiitappver2.SocietyModelCategory
 import com.google.firebase.auth.FirebaseAuth
 import com.example.kiitappver2.databinding.FragmentHome2Binding
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
