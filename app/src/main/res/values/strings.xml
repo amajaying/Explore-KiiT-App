@@ -69,6 +69,10 @@
     <string name="edit_profile">Edit</string>
     <string name="logout1">Logout</string>
     <string name="title_activity_bottom">Bottom</string>
+    <string name="societies">Societies</string>
+    <string name="academics">Academics</string>
+    <string name="campus_life">Campus Life</string>
+    <string name="placements">Placements</string>
 
 
 </resources>
