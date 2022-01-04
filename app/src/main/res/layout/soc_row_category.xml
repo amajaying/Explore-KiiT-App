@@ -1,47 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardUseCompatPadding="true"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="0dp"
-    app:cardBackgroundColor="@color/white">
+    android:layout_marginTop="10dp"
+
+    >
 
     <RelativeLayout
+        android:id="@+id/visibleLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/societylogo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/img_society_one"/>
+        android:padding="10dp"
+        android:background="@drawable/green_bg">
 
         <TextView
             android:id="@+id/name"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/societylogo"
             android:layout_centerVertical="true"
-            android:maxLines="2"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/productsansbold"
             android:text="@string/model_un_society"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
             android:textSize="20sp" />
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/right_arrow" />
-
+<!--        <ImageView-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginEnd="5dp"-->
+<!--            android:src="@drawable/right_arrow" />-->
     </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expandedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/visibleLayout"
+        >
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ModelUN"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/productsansregular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white"
+            android:padding="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

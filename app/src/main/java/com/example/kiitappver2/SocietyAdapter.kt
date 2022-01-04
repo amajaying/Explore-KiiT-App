@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
@@ -22,6 +24,17 @@ class SocietyAdapter(private val societyList:ArrayList<Society>):RecyclerView.Ad
     override fun onBindViewHolder(holder: SocietyViewHolder, position: Int) {
         val currentItem = societyList[position]
         holder.name.text= currentItem.name
+        holder.details.text = currentItem.details
+
+        val isVisible : Boolean = currentItem.visibility
+        holder.constraintLayout.visibility = if(isVisible) View.VISIBLE else View.GONE
+
+        holder.tap.setOnClickListener{
+            currentItem.visibility = !currentItem.visibility
+            notifyItemChanged(position)
+        }
+
+
 
     }
 
@@ -32,6 +45,8 @@ class SocietyAdapter(private val societyList:ArrayList<Society>):RecyclerView.Ad
 
     class SocietyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val name : TextView = itemView.findViewById(R.id.name)
-
+        val details: TextView = itemView.findViewById(R.id.details)
+        val constraintLayout:ConstraintLayout = itemView.findViewById(R.id.expandedLayout)
+        val tap:RelativeLayout = itemView.findViewById(R.id.visibleLayout)
     }
 }
