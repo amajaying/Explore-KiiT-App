@@ -11,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NoLoginActivity : AppCompatActivity() {
 
+
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.home -> {
@@ -38,6 +39,7 @@ class NoLoginActivity : AppCompatActivity() {
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         moveToFragment(NoLoginHomeFragment())
+
 
 
     }
