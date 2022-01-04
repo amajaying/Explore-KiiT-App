@@ -1,4 +1,5 @@
-package com.example.kiitappwithinstaclone
+package com.example.kiitappver2
+
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -17,19 +18,19 @@ class SplashActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         Handler().postDelayed(Runnable{
+
             checkUser()
-        },1500)
+
+        },1000)
     }
 
     private fun checkUser() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null){
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
         }
         else{
             startActivity(Intent(this, MainActivity::class.java))
-            finish()
         }
     }
 }

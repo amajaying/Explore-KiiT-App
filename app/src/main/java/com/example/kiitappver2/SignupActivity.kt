@@ -1,16 +1,16 @@
-package com.example.kiitappwithinstaclone
+package com.example.kiitappver2
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kiitappwithinstaclone.databinding.ActivitySignupBinding
+import com.example.kiitappversion2.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class SignupActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivitySignupBinding
+    private lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

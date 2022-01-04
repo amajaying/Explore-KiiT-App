@@ -1,4 +1,4 @@
-package com.example.kiitappwithinstaclone
+package com.example.kiitappver2
 
 import org.junit.Test
 

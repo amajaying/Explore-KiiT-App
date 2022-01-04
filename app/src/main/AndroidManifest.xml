@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kiitappwithinstaclone">
+    package="com.example.kiitappver2">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,26 +13,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITappWithInstaClone">
         <activity
-            android:name=".SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignupActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LoginActivity"
+            android:name="com.example.kiitappver2.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
-            android:name=".AccountSettingsActivity"
+            android:name="com.example.kiitappver2.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:name="com.example.kiitappver2.LoginActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.kiitappver2.AccountSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kiitappver2.MainActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

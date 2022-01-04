@@ -1,4 +1,4 @@
-package com.example.kiitappwithinstaclone
+package com.example.kiitappver2
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import com.example.kiitappwithinstaclone.databinding.ActivityLoginBinding
+import com.example.kiitappversion2.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_signup.*
 
@@ -80,12 +80,12 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart(){
         super.onStart()
 
-        if(FirebaseAuth.getInstance().currentUser != null){
-            val intent = Intent(this, MainActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            finish()
-        }
+//        if(FirebaseAuth.getInstance().currentUser != null){
+//            val intent = Intent(this, MainActivity::class.java)
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+//            startActivity(intent)
+//            finish()
+//        }
 
     }
 }
