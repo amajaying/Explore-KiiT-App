@@ -9,10 +9,14 @@ import android.view.ViewGroup
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.kiitappver2.LoginActivity
-import com.example.kiitappver2.R
+import com.example.kiitappver2.SocietyAdapterCategory
+import com.example.kiitappver2.SocietyModelCategory
 import com.google.firebase.auth.FirebaseAuth
 import com.example.kiitappver2.databinding.FragmentHome2Binding
 import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,6 +32,7 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
 
     private var _binding: FragmentHome2Binding? = null
 
@@ -54,6 +59,7 @@ class HomeFragment : Fragment() {
         //Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
+
 
         //Image Slder Start
         val imageSlider = binding.imageSlier
@@ -94,6 +100,8 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
+
+
 
     fun checkUser() {
         val firebaseUser = firebaseAuth.currentUser
