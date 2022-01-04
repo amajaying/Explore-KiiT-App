@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.skipLogin.setOnClickListener{
-
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         binding.loginButton.setOnClickListener{
