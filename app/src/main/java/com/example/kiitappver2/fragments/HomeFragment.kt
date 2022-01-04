@@ -1,5 +1,6 @@
 package com.example.kiitappver2.fragments
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -47,14 +48,14 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        /* Inflate the layout for this fragment */
+
         _binding = FragmentHome2Binding.inflate(inflater, container, false)
 
-        //
+        //Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
-
+        //Image Slder Start
         val imageSlider = binding.imageSlier
         val imageList = ArrayList<SlideModel>()
 
@@ -65,9 +66,16 @@ class HomeFragment : Fragment() {
         imageList.add(SlideModel("https://firebasestorage.googleapis.com/v0/b/appfinalkiit.appspot.com/o/SliderImages%2Fslider_two.png?alt=media&token=7e26353d-ab40-425b-a988-b6c9353445ac"))
 
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
+        //Image Slider Finish
 
+        //Virtual Tour Button
+        binding.virtualToutbtn.setOnClickListener{
+            val uri = Uri.parse("https://kiit.ac.in/tour/")
 
-
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+        //Virtual Button Finish
 
         return binding.root
     }
