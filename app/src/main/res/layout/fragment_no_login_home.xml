@@ -70,6 +70,50 @@
                     app:iss_placeholder="@android:color/darker_gray"
                     app:iss_selected_dot="@drawable/default_selected_dot"
                     app:iss_unselected_dot="@drawable/default_unselected_dot" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/imageSlier"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Want a"
+                            android:textSize="20sp"
+                            android:textColor="#3d3d3d"
+                            android:fontFamily="@font/productsansregular"
+                            android:layout_marginTop="28dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Virtual Tour?"
+                            android:textColor="@color/priCol"
+                            android:textSize="26sp"
+                            android:fontFamily="@font/productsansbold"
+
+                            android:layout_marginTop="5dp"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/virtualToutbtn"
+                        android:layout_width="128dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="30dp"
+                        android:src="@drawable/click_here" />
+
+                </RelativeLayout>
+
             </RelativeLayout>
         </LinearLayout>
 
