@@ -1,14 +1,17 @@
 package com.example.kiitappwithinstaclone.fragments
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kiitappwithinstaclone.LoginActivity
 import com.example.kiitappwithinstaclone.R
 import com.example.kiitappwithinstaclone.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.example.kiitappwithinstaclone.databinding.FragmentHome2Binding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,9 +29,11 @@ class HomeFragment : Fragment() {
     private var param2: String? = null
 
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var binding: ActivityMainBinding
+    private var _binding: FragmentHome2Binding? = null
 
-
+    // with the backing property of the kotlin we extract
+    // the non null value of the _binding
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +48,24 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home2, container, false)
+        _binding = FragmentHome2Binding.inflate(inflater, container, false)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        checkUser()
+
+
+        return binding.root
+    }
+
+    private fun checkUser() {
+        val firebaseUser = firebaseAuth.currentUser
+        if (firebaseUser == null){
+            startActivity(Intent(context, LoginActivity::class.java))
+        }
+        else{
+            val name = firebaseUser.displayName
+             binding.username.text = name
+        }
     }
 
     companion object {

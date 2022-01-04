@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
+
 
         val navView: BottomNavigationView = findViewById(R.id.bottomNav)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
@@ -56,16 +55,7 @@ class MainActivity : AppCompatActivity() {
         moveToFragment(HomeFragment())
     }
 
-    private fun checkUser() {
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser == null){
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-        else{
-            val name = firebaseUser.displayName
 
-        }
-    }
 
     private fun moveToFragment(fragment: Fragment)
     {
