@@ -33,9 +33,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.kiitappver2.MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"/>
     </application>
 
 </manifest>
