@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/appBarLayout"
-        android:background="">
+        android:background="@null">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/accsettings_toolbar"
