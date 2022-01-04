@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.NoLoginHomeFragment"
     android:background="#F6F5F5">
 
@@ -57,40 +58,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/avatar"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/pp_side_menu" />
-
-                <TextView
-                    android:id="@+id/greeting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="21dp"
-                    android:maxLines="1"
-                    android:fontFamily="@font/productsansregular"
-                    android:text="Goodmorning,"
-                    android:layout_toEndOf="@+id/avatar"
-                    android:textColor="#3d3d3d"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/greeting"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_toEndOf="@+id/avatar"
-                    android:fontFamily="@font/productsansregular"
-                    android:maxLines="1"
-                    android:text="@string/ajay_khatri_chhetri"
-                    android:textColor="#0CA64D"
-                    android:textSize="18sp" />
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlier"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="5"
+                    app:iss_delay="0"
+                    app:iss_error_image="@android:color/darker_gray"
+                    app:iss_period="2000"
+                    app:iss_placeholder="@android:color/darker_gray"
+                    app:iss_selected_dot="@drawable/default_selected_dot"
+                    app:iss_unselected_dot="@drawable/default_unselected_dot" />
             </RelativeLayout>
         </LinearLayout>
 

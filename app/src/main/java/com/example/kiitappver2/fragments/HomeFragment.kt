@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.example.kiitappver2.LoginActivity
 import com.example.kiitappver2.R
 import com.google.firebase.auth.FirebaseAuth
@@ -51,6 +53,19 @@ class HomeFragment : Fragment() {
         //
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
+
+
+        val imageSlider = binding.imageSlier
+        val imageList = ArrayList<SlideModel>()
+
+
+        imageList.add(SlideModel("https://firebasestorage.googleapis.com/v0/b/appfinalkiit.appspot.com/o/SliderImages%2Fslider_four.png?alt=media&token=4bcf1fb3-717f-4d77-b902-c57ab24798b8"))
+        imageList.add(SlideModel("https://firebasestorage.googleapis.com/v0/b/appfinalkiit.appspot.com/o/SliderImages%2Fslider_one.png?alt=media&token=3431cc5f-eece-45e0-9619-63c45eefc024"))
+        imageList.add(SlideModel("https://firebasestorage.googleapis.com/v0/b/appfinalkiit.appspot.com/o/SliderImages%2Fslider_three.png?alt=media&token=b913792e-af40-46ba-bd11-cd7844bf48d4"))
+        imageList.add(SlideModel("https://firebasestorage.googleapis.com/v0/b/appfinalkiit.appspot.com/o/SliderImages%2Fslider_two.png?alt=media&token=7e26353d-ab40-425b-a988-b6c9353445ac"))
+
+        imageSlider.setImageList(imageList, ScaleTypes.FIT)
+
 
 
 
