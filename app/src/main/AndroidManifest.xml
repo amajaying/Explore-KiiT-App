@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITappWithInstaClone">
         <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -23,18 +26,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".AccountSettingsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-
-
+            android:exported="true"></activity>
     </application>
 
 </manifest>

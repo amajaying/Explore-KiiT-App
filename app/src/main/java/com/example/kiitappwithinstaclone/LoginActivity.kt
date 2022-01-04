@@ -21,25 +21,29 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        binding.skipLogin.setOnClickListener{
+
+        }
+
         binding.loginButton.setOnClickListener{
             loginUser()
         }
     }
 
     private fun loginUser() {
-        val email = binding.email.text.toString()
-        val password = binding.password.text.toString()
+        val email = binding.email.text.toString().trim()
+        val password = binding.password.text.toString().trim()
 
         when {
             TextUtils.isEmpty(email) -> Toast.makeText(
                 this,
                 "Email is required!",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
             TextUtils.isEmpty(password) -> Toast.makeText(
                 this,
                 "Password is required!",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
 
             else -> {
@@ -62,10 +66,11 @@ class LoginActivity : AppCompatActivity() {
                         }
                         else
                         {
+                            progressDialog.dismiss()
                             val message = task.exception!!.toString()
                             Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG).show()
                             FirebaseAuth.getInstance()
-                            progressDialog.dismiss()
+
                         }
                 }
             }
