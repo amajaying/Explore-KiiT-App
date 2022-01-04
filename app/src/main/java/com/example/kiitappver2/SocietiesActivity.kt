@@ -43,7 +43,7 @@ class SocietiesActivity : AppCompatActivity() {
                         val society = societySnapshot.getValue(Society::class.java)
                         societyArrayList.add(society!!)
                     }
-                    societyRecyclerView.adapter = SocietyAdapter(societyArrayList)
+                    societyRecyclerView.adapter = SocietyAdapter(this@SocietiesActivity,societyArrayList)
                 }
             }
 
