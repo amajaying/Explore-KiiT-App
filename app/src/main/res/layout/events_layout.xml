@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansbold"
-                android:text="Recent Events at KiiT"
+                android:text="@string/recent_events_at_kiit"
                 android:textSize="20sp"
                 android:layout_marginStart="5dp"
                 android:textColor="#F9E479"/>
@@ -44,15 +44,15 @@
             android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/edit_profile"
+            android:id="@+id/viewallbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/productsansregular"
+            android:fontFamily="@font/productsansbold"
 
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:layout_gravity="center_vertical"
             android:textColor="@color/white"
-            android:text="View All" />
+            android:text="@string/view_all" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -60,7 +60,6 @@
         android:id="@+id/eventname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recent"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="5dp">
@@ -77,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansbold"
-                android:text="1st International Conference On Smart Technology for Power and Green Energy (STPGE-2022)"
+                android:text="@string/_1st_international_conference_on_smart_technology_for_power_and_green_energy_stpge_2022"
                 android:textSize="18sp"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/white"/>
@@ -107,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansregular"
-                android:text="KIIT Deemed to be University"
+                android:text="@string/kiit_deemed_to_be_university"
                 android:textSize="15sp"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/white"/>
@@ -118,7 +117,6 @@
         android:id="@+id/eventdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/eventaddress"
         android:layout_marginStart="5dp">
 
         <LinearLayout
@@ -136,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansregular"
-                android:text="January 21, 2022 to January 22, 2022"
+                android:text="@string/january_21_2022_to_january_22_2022"
                 android:textSize="15sp"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/white"/>

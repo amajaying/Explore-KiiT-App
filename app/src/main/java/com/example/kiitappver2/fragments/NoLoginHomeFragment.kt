@@ -76,6 +76,13 @@ class NoLoginHomeFragment : Fragment() {
         }
         //Virtual Button Finish
 
+        binding.viewallbtn.setOnClickListener{
+            val uri = Uri.parse("https://kiit.ac.in/events/")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 

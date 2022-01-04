@@ -73,6 +73,11 @@
     <string name="academics">Academics</string>
     <string name="campus_life">Campus Life</string>
     <string name="placements">Placements</string>
+    <string name="recent_events_at_kiit">Recent Events at KiiT</string>
+    <string name="view_all">View All</string>
+    <string name="january_21_2022_to_january_22_2022">January 21, 2022 to January 22, 2022</string>
+    <string name="kiit_deemed_to_be_university">KIIT Deemed to be University</string>
+    <string name="_1st_international_conference_on_smart_technology_for_power_and_green_energy_stpge_2022">1st International Conference On Smart Technology for Power and Green Energy (STPGE-2022)</string>
 
 
 </resources>
