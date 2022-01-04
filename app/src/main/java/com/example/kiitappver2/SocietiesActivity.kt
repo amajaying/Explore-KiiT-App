@@ -27,6 +27,10 @@ class SocietiesActivity : AppCompatActivity() {
         binding = ActivitySocietiesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backButton.setOnClickListener{
+            onBackPressed()
+        }
+
         name = arrayOf(
             "Model Un Society",
             "Entrepreneurship Cell",
