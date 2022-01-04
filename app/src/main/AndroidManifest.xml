@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITAppVer2">
         <activity
+            android:name=".ViewSocietyActivity"
+            android:exported="false" />
+        <activity
             android:name=".SocietiesActivity"
             android:exported="false" />
         <activity

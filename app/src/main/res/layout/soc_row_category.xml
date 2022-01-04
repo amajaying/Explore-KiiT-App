@@ -24,10 +24,11 @@
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="wrap_content"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/societylogo"
             android:layout_centerVertical="true"
+            android:maxLines="2"
             android:layout_marginStart="15dp"
             android:fontFamily="@font/productsansbold"
             android:text="@string/model_un_society"
@@ -38,7 +39,7 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="5dp"
             android:src="@drawable/right_arrow" />
 
     </RelativeLayout>

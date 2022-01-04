@@ -19,7 +19,6 @@ class SocietyAdapter(private val societyList : ArrayList<Society>) : RecyclerVie
     override fun onBindViewHolder(holder: SocietyViewHolder, position: Int) {
        val currentItem = societyList[position]
         holder.name.text = currentItem.name
-
     }
 
     override fun getItemCount(): Int {
