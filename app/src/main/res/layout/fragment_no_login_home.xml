@@ -161,16 +161,12 @@
                                 android:gravity="center"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <ImageView
                                     android:id="@+id/viewallbtn"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-
+                                    android:layout_width="55dp"
+                                    android:layout_height="24dp"
                                     android:fontFamily="@font/productsansbold"
-                                    android:text="@string/view_all"
-                                    android:textColor="@color/white"
-                                    android:textSize="14sp" />
+                                    android:src="@drawable/view_all_icon" />
                             </LinearLayout>
                         </RelativeLayout>
 
