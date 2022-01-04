@@ -81,6 +81,8 @@
     <string name="virtual_tour">Virtual Tour?</string>
     <string name="want_a">Want a</string>
     <string name="model_un_society">Model UN Society</string>
+    <string name="model_nun_society">Model \nUN Society</string>
+    <string name="ModelUN">Model UN Society organises its flagship annual event – KIIT International Model United Nations. Held in collaboration with UNFPA and US Consulate General, Hyderabad, the last year’s edition was attended by 1800 student-delegates from all corners of India and 20 countries.</string>
 
 
 </resources>

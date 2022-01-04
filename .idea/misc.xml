@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/events_bg.xml" value="0.15608108108108107" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/green_bg.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/login_background.xml" value="0.23697916666666666" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_account_settings.xml" value="0.22" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_login.xml" value="0.16" />
@@ -15,6 +16,7 @@
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_signup.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_societies.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_splash.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/activity_view_society.xml" value="0.13648648648648648" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/cardview_notification.xml" value="0.22447916666666667" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/events_layout.xml" value="0.25" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/layout/footer.xml" value="0.22083333333333333" />
