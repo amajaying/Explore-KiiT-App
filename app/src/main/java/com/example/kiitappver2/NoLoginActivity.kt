@@ -1,34 +1,26 @@
 package com.example.kiitappver2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.kiitappver2.fragments.AttendanceFragment
-import com.example.kiitappver2.fragments.HomeFragment
-import com.example.kiitappver2.fragments.NotificationFragment
-import com.example.kiitappver2.fragments.ProfileFragment
+import com.example.kiitappver2.databinding.ActivityNoLoginMainBinding
+
+import com.example.kiitappver2.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
-class MainActivity : AppCompatActivity() {
+class NoLoginActivity : AppCompatActivity() {
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.home -> {
-                moveToFragment(HomeFragment())
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.attendance -> {
-                moveToFragment(AttendanceFragment())
+                moveToFragment(NoLoginHomeFragment())
                 return@OnNavigationItemSelectedListener true
             }
 
-            R.id.notification -> {
-                moveToFragment(NotificationFragment())
-                return@OnNavigationItemSelectedListener true
-            }
             R.id.profile -> {
-                moveToFragment(ProfileFragment())
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -36,19 +28,17 @@ class MainActivity : AppCompatActivity() {
         false
     }
 
-
-
-
+    private lateinit var binding: ActivityNoLoginMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityNoLoginMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-
-
-        val navView: BottomNavigationView = findViewById(R.id.bottomNav)
+        val navView: BottomNavigationView = findViewById(R.id.bottomNavnologin)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
-        moveToFragment(HomeFragment())
+        moveToFragment(NoLoginHomeFragment())
+
 
     }
 

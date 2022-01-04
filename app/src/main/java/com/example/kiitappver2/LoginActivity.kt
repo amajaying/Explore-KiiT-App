@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import com.example.kiitappversion2.databinding.ActivityLoginBinding
+import com.example.kiitappver2.databinding.ActivityLoginBinding
+
+
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_signup.*
 
@@ -22,7 +24,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.skipLogin.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, NoLoginActivity::class.java)
+            startActivity(intent)
         }
 
         binding.loginButton.setOnClickListener{

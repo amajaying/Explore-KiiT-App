@@ -68,6 +68,7 @@
     <string name="save_changes">Save Changes</string>
     <string name="edit_profile">Edit</string>
     <string name="logout1">Logout</string>
+    <string name="title_activity_bottom">Bottom</string>
 
 
 </resources>

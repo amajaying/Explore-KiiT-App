@@ -15,7 +15,8 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
-import com.example.kiitappversion2.databinding.ActivityAccountSettingsBinding
+import com.example.kiitappver2.databinding.ActivityAccountSettingsBinding
+
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
