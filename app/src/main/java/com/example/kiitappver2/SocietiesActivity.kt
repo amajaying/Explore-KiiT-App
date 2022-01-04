@@ -1,12 +1,11 @@
 package com.example.kiitappver2
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.RecoverySystem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kiitappver2.databinding.ActivitySocietiesBinding
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class SocietiesActivity : AppCompatActivity() {
@@ -34,13 +33,18 @@ class SocietiesActivity : AppCompatActivity() {
     }
 
     private fun getSocietyData() {
+
         dbref = FirebaseDatabase.getInstance().getReference("Societies")
+
         dbref.addValueEventListener(object : ValueEventListener{
+
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
-                    for(dataSnapshot in snapshot.children){
-
+                    for(societySnapshot in snapshot.children){
+                        val society = societySnapshot.getValue(Society::class.java)
+                        societyArrayList.add(society!!)
                     }
+                    societyRecyclerView.adapter = SocietyAdapter(societyArrayList)
                 }
             }
 
