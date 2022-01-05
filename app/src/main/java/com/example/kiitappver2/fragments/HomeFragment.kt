@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.kiitappver2.FounderActivity
 import com.example.kiitappver2.LoginActivity
 import com.example.kiitappver2.SocietiesActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -91,6 +92,10 @@ class HomeFragment : Fragment() {
         // Home Menu Linking
         binding.societiesbtn.setOnClickListener {
             startActivity(Intent(context, SocietiesActivity::class.java))
+        }
+
+        binding.knowfounderbtn.setOnClickListener {
+            startActivity(Intent(context, FounderActivity::class.java))
         }
 
 

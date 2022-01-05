@@ -47,69 +47,80 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout">
 
-        <ImageView
-            android:id="@+id/bg_founder"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/know_founder_bg" />
-
-
-        <RelativeLayout
-            android:id="@+id/greenlayout"
+        <LinearLayout
+            android:background="@drawable/green_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-30dp"
-            android:background="@drawable/green_bg"
-            android:padding="25dp">
-
-
-            <TextView
-                android:id="@+id/name_founder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="@font/productsansbold"
-                android:paddingTop="55dp"
-                android:text="@string/prof_achyuta_nsamanta"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="40sp" />
-
-            <View
-                android:id="@+id/line"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/bg_founder"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@id/name_founder"
-                android:layout_marginTop="15dp"
-                android:background="@color/white" />
+                android:layout_height="190dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/know_founder_bg" />
 
-            <TextView
+            <RelativeLayout
+                android:id="@+id/greenlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/productsansregular"
-                android:text="@string/founder_details"
-                android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/green_bg"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/name_founder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/productsansbold"
+                    android:paddingTop="55dp"
+                    android:text="@string/prof_achyuta_nsamanta"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="40sp" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/name_founder"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/founder_details"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFounder"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="-670dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/know_founder_pp" />
+            <include
+                layout="@layout/founder_socials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="530dp" />
+        </LinearLayout>
 
 
-        </RelativeLayout>
 
-        <androidx.constraintlayout.utils.widget.ImageFilterView
-            android:id="@+id/imageFounder"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="-100dp"
-            android:src="@drawable/know_founder_pp" />
 
-        <include
-            layout="@layout/founder_socials"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+
+
+
 
     </ScrollView>
 </RelativeLayout>
