@@ -47,7 +47,7 @@
         android:layout_height="105dp"
         app:cardCornerRadius="10dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:innerRadius="0dp"
         android:shape="ring"
         android:layout_below="@id/appBarLayout"
@@ -65,14 +65,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/appBarLayout"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginEnd="35dp"
                 android:orientation="vertical"
                 android:layout_alignParentEnd="true"
                 >
 
                 <TextView
-                    android:id="@+id/student_name1"
+                    android:id="@+id/studentname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -82,7 +82,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/semester1"
+                    android:id="@+id/semester"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -94,14 +94,81 @@
 
             </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileImg"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:text="@string/your_attendace"
+                android:textColor="#3d3d3d"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/attNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:text="@string/_30_days"
+                android:textColor="#3d3d3d"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp">
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circularProgressBar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                app:cpb_background_progressbar_color="#CFCFCF"
+                app:cpb_background_progressbar_color_direction="right_to_left"
+                app:cpb_background_progressbar_width="8dp"
+                app:cpb_progress="75"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progress_max="100"
+                app:cpb_progressbar_color_end="@color/secCol"
+                app:cpb_progressbar_color_start="@color/priCol"
+                app:cpb_progressbar_width="8dp"
+                app:cpb_round_border="false"
+                app:cpb_start_angle="0" />
+
+            <TextView
+                android:id="@+id/percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/productsansbold"
+                android:text="@string/_75"
+                android:textColor="#3d3d3d"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
 
     <org.naishadhparmar.zcustomcalendar.CustomCalendar
         android:id="@+id/calendar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/profileImg"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 
 
 </RelativeLayout>

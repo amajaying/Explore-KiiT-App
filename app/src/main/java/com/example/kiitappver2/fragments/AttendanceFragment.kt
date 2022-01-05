@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.kiitappver2.R
+import kotlinx.android.synthetic.main.fragment_attendance2.*
+import org.naishadhparmar.zcustomcalendar.CustomCalendar
+import java.util.HashMap
+
+import org.naishadhparmar.zcustomcalendar.Property
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +27,8 @@ class AttendanceFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +42,8 @@ class AttendanceFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_attendance2, container, false)
+        return inflater.inflate(com.example.kiitappver2.R.layout.fragment_attendance2, container, false)
+
     }
 
     companion object {
