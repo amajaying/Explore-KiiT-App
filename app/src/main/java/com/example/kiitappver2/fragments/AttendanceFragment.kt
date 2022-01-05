@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.example.kiitappver2.R
 import com.example.kiitappver2.databinding.FragmentAttendance2Binding
 import com.example.kiitappver2.databinding.FragmentHome2Binding
 import com.google.firebase.auth.FirebaseAuth
@@ -13,6 +15,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_attendance2.*
+import kotlinx.android.synthetic.main.fragment_attendance2.view.*
+import kotlinx.android.synthetic.main.fragment_attendance2.view.profileImg1
+import kotlinx.android.synthetic.main.profile_pp_nam.view.*
 import org.naishadhparmar.zcustomcalendar.CustomCalendar
 import java.util.HashMap
 
@@ -34,8 +39,6 @@ class AttendanceFragment : Fragment() {
     private var _binding: FragmentAttendance2Binding? = null
 
     private val binding get() = _binding!!
-
-    private var progressbar = 0
 
     private lateinit var firebaseAuth: FirebaseAuth
     // TODO: Rename and change types of parameters
@@ -62,33 +65,34 @@ class AttendanceFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
         loadUserInfo()
 
-        binding.circularProgressBar.progress = progressbar.toFloat()
-
         return binding.root
     }
 
     private fun loadUserInfo() {
-        val ref = FirebaseDatabase.getInstance().getReference("Attendance")
+        val ref = FirebaseDatabase.getInstance().getReference("Users")
         ref.child(firebaseAuth.uid!!)
-            .addValueEventListener(object : ValueEventListener{
+            .addValueEventListener(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    val name = "${snapshot.child("name").value}"
+                    val name = "${snapshot.child("fullname").value}"
                     val semester = "${snapshot.child("semester").value}"
                     val attNo = "${snapshot.child("attNo").value}"
                     val progress = "${snapshot.child("progress").value}"
                     val percent = "${snapshot.child("percent").value}"
+                    val uid = "${snapshot.child("uid").value}"
+                    val image = "${snapshot.child("image").value}"
+
+                    view!!.studentname.text = name
+                    view!!.semester.text = semester
+                    view!!.attNo.text = attNo
+                    view!!.percent.text = percent
+                    view!!.circularProgressBar.progress = progress.toFloat()
 
 
-                    binding.studentname.text = name
-                    binding.semester.text = semester
-                    binding.attNo.text = attNo
-                    binding.percent.text = percent
-                    binding.circularProgressBar.progress = progress.toFloat()
 
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
+
                 }
 
             })

@@ -64,7 +64,7 @@
         android:id="@+id/profileImg1"
         android:layout_width="105dp"
         android:layout_height="105dp"
-        android:src="@drawable/profile_pp"
+        android:src="@drawable/default_profile"
         android:layout_centerHorizontal="true"
         />
     </androidx.cardview.widget.CardView>
