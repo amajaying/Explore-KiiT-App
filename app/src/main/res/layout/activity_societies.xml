@@ -14,7 +14,7 @@
         android:id="@+id/appBarLayout">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/accsettings_toolbar"
+            android:id="@+id/society_toolbar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/white_gray_border_tabs">

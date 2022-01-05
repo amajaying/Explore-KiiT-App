@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/App/Explore-KiiT/app/src/main/res/drawable/green_bg.xml" value="0.240625" />
+        <entry key="..\:/App/Explore-KiiT/app/src/main/res/layout/activity_founder.xml" value="0.1911231884057971" />
+        <entry key="..\:/App/Explore-KiiT/app/src/main/res/layout/activity_societies.xml" value="0.22447916666666667" />
+        <entry key="..\:/App/Explore-KiiT/app/src/main/res/layout/founder_socials.xml" value="0.22447916666666667" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/events_bg.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/green_bg.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/login_background.xml" value="0.23697916666666666" />

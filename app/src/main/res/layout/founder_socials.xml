@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/social"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Socials"
+        android:textSize="22sp"
+        android:fontFamily="@font/productsansbold"
+        android:textColor="#3d3d3d"/>
+
+    <LinearLayout
+        android:layout_below="@id/social"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/fb_icon"/>
+
+        <ImageView
+            android:id="@+id/twt"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/twitter_icon"
+            android:layout_marginStart="15dp"/>
+
+        <ImageView
+            android:id="@+id/insta"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/insta_icon"
+            android:layout_marginStart="15dp"/>
+
+        <ImageView
+            android:id="@+id/web"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/web_icon"
+            android:layout_marginStart="15dp"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
