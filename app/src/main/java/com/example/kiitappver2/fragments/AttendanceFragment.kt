@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kiitappver2.databinding.FragmentAttendance2Binding
+import com.example.kiitappver2.databinding.FragmentHome2Binding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_attendance2.*
 import org.naishadhparmar.zcustomcalendar.CustomCalendar
 import java.util.HashMap
@@ -23,6 +27,14 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class AttendanceFragment : Fragment() {
+
+    private var _binding: FragmentAttendance2Binding? = null
+
+    private val binding get() = _binding!!
+
+    private var progressbar = 0
+
+    private lateinit var firebaseAuth: FirebaseAuth
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -41,9 +53,19 @@ class AttendanceFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(com.example.kiitappver2.R.layout.fragment_attendance2, container, false)
+        _binding = FragmentAttendance2Binding.inflate(inflater, container, false)
 
+        //Firebase Auth
+        firebaseAuth = FirebaseAuth.getInstance()
+        loadUserInfo()
+
+        binding.circularProgressBar.progress = progressbar.toFloat()
+
+        return binding.root
+    }
+
+    private fun loadUserInfo() {
+        val ref = FirebaseDatabase.getInstance().getReference("Attendance")
     }
 
     companion object {

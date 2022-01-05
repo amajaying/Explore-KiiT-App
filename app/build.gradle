@@ -65,7 +65,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:2.3.0'
 
     /*imageview dependencies*/
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
@@ -80,8 +80,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
-
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
     implementation 'org.naishadhparmar.zcustomcalendar:zcustomcalendar:1.0.1'
 
 }

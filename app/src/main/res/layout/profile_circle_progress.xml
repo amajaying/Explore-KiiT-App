@@ -17,7 +17,7 @@
         app:cpb_progressbar_color_start="@color/priCol"
         app:cpb_progressbar_color_end="@color/secCol"
         app:cpb_progressbar_width="8dp"
-        app:cpb_progress="75"
+        app:cpb_progress="0"
         app:cpb_progress_max="100"
         app:cpb_round_border="false"/>
 
