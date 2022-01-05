@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import com.example.kiitappver2.databinding.FragmentAttendance2Binding
 import com.example.kiitappver2.databinding.FragmentHome2Binding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_attendance2.*
 import org.naishadhparmar.zcustomcalendar.CustomCalendar
 import java.util.HashMap
@@ -66,6 +69,30 @@ class AttendanceFragment : Fragment() {
 
     private fun loadUserInfo() {
         val ref = FirebaseDatabase.getInstance().getReference("Attendance")
+        ref.child(firebaseAuth.uid!!)
+            .addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val name = "${snapshot.child("name").value}"
+                    val semester = "${snapshot.child("semester").value}"
+                    val attNo = "${snapshot.child("attNo").value}"
+                    val progress = "${snapshot.child("progress").value}"
+                    val percent = "${snapshot.child("percent").value}"
+
+
+                    binding.studentname.text = name
+                    binding.semester.text = semester
+                    binding.attNo.text = attNo
+                    binding.percent.text = percent
+                    binding.circularProgressBar.progress = progress.toFloat()
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            })
+
     }
 
     companion object {
