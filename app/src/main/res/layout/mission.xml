@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mission"
+        android:text="@string/mission"
         android:textSize="35sp"
         android:textAlignment="center"
         android:fontFamily="@font/productsansbold"
