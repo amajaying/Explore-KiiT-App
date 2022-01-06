@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.kiitappver2.FounderActivity
+import com.example.kiitappver2.KnowKiitActivity
 import com.example.kiitappver2.R
 import com.example.kiitappver2.SocietiesActivity
 import com.example.kiitappver2.databinding.FragmentHome2Binding
