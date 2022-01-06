@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/productsansbold"
-                    android:text="Know Founder"
+                    android:text="Know KiiT"
                     android:textColor="#3d3d3d"
                     android:textSize="20sp" />
             </RelativeLayout>

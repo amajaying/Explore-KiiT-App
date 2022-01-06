@@ -87,6 +87,15 @@ class NoLoginHomeFragment : Fragment() {
         binding.societiesbtn.setOnClickListener {
             startActivity(Intent(context, SocietiesActivity::class.java))
         }
+
+        binding.knowfounderbtn.setOnClickListener {
+            startActivity(Intent(context, FounderActivity::class.java))
+        }
+
+        binding.knowkiitbtn.setOnClickListener {
+            startActivity(Intent(context, KnowKiitActivity::class.java))
+        }
+
         return binding.root
     }
 
