@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITAppVer2">
         <activity
+            android:name=".KnowKiitActivity"
+            android:exported="false" />
+        <activity
             android:name=".FounderActivity"
             android:exported="false" />
         <activity
