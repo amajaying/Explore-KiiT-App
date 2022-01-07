@@ -24,9 +24,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage.*
-import kotlinx.android.synthetic.main.activity_signup.*
-import kotlinx.android.synthetic.main.profile_info_part.view.*
-import kotlinx.android.synthetic.main.profile_pp_nam.view.*
 
 
 class AccountSettingsActivity : AppCompatActivity() {
@@ -86,39 +83,27 @@ class AccountSettingsActivity : AppCompatActivity() {
     private var contact = ""
     private var address = ""
 
-    private fun validateData(){
+    private fun validateData() {
         name = binding.editname.text.toString().trim()
         roll = binding.editroll.text.toString().trim()
         sem = binding.editsem.text.toString().trim()
         contact = binding.editcontact.text.toString().trim()
         address = binding.editaddress.text.toString().trim()
 
-        if (name.isEmpty()){
+        if (name.isEmpty()) {
             Toast.makeText(this, "Enter Full Name", Toast.LENGTH_SHORT).show()
-        }
-
-        else if (roll.isEmpty()){
+        } else if (roll.isEmpty()) {
             Toast.makeText(this, "Enter Roll No.", Toast.LENGTH_SHORT).show()
-        }
-
-        else if (sem.isEmpty()){
+        } else if (sem.isEmpty()) {
             Toast.makeText(this, "Enter current Semester", Toast.LENGTH_SHORT).show()
-        }
-
-        else if (contact.isEmpty()){
+        } else if (contact.isEmpty()) {
             Toast.makeText(this, "Enter Contact No.", Toast.LENGTH_SHORT).show()
-        }
-
-        else if (address.isEmpty()){
+        } else if (address.isEmpty()) {
             Toast.makeText(this, "Enter Address", Toast.LENGTH_SHORT).show()
-        }
-
-
-        else{
-            if (imageUri==null){
+        } else {
+            if (imageUri == null) {
                 updateProfile("")
-            }
-            else{
+            } else {
                 uploadImage()
             }
 
@@ -129,11 +114,11 @@ class AccountSettingsActivity : AppCompatActivity() {
         progressDialog.setMessage("Uploading profile picture")
         progressDialog.show()
 
-        val filePathAndName = "ProfileImages/"+firebaseAuth.uid
+        val filePathAndName = "ProfileImages/" + firebaseAuth.uid
 
         val reference = getInstance().getReference(filePathAndName)
         reference.putFile(imageUri!!)
-            .addOnSuccessListener{ taskSnapshot ->
+            .addOnSuccessListener { taskSnapshot ->
                 val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
 //                while (!uriTask.isSuccessful);
                 val uploadedImageUrl = "${uriTask.result}"
@@ -141,9 +126,13 @@ class AccountSettingsActivity : AppCompatActivity() {
                 updateProfile(uploadedImageUrl)
 
             }
-            .addOnFailureListener{e ->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "Failed to upload image due to ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Failed to upload image due to ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
@@ -156,7 +145,7 @@ class AccountSettingsActivity : AppCompatActivity() {
         hashmap["semester"] = sem
         hashmap["phoneNo"] = contact
         hashmap["address"] = address
-        if (imageUri!=null){
+        if (imageUri != null) {
             hashmap["image"] = uploadedImageUrl
         }
 
@@ -167,16 +156,20 @@ class AccountSettingsActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 Toast.makeText(this, "Profile Updated!", Toast.LENGTH_SHORT).show()
             }
-            .addOnFailureListener {e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(this, "Failed to update profile due to ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Failed to update profile due to ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
     private fun loadUserInfo() {
-        val ref =FirebaseDatabase.getInstance().getReference("Users")
+        val ref = FirebaseDatabase.getInstance().getReference("Users")
         ref.child(firebaseAuth.uid!!)
-            .addValueEventListener(object: ValueEventListener {
+            .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val address = "${snapshot.child("address").value}"
                     val fullname = "${snapshot.child("fullname").value}"
@@ -188,11 +181,11 @@ class AccountSettingsActivity : AppCompatActivity() {
 
                     //set Data
 
-                   binding.editname.setText(fullname)
-                   binding.editaddress.setText(address)
-                   binding.editcontact.setText(phoneNo)
-                   binding.editroll.setText(rollNo)
-                   binding.editsem.setText(semester)
+                    binding.editname.setText(fullname)
+                    binding.editaddress.setText(address)
+                    binding.editcontact.setText(phoneNo)
+                    binding.editroll.setText(rollNo)
+                    binding.editsem.setText(semester)
 
                     //settingimage
                     try {
@@ -200,8 +193,7 @@ class AccountSettingsActivity : AppCompatActivity() {
                             .load(image)
                             .placeholder(R.drawable.default_profile)
                             .into(binding.editProfilePp)
-                    }
-                    catch (e: Exception){
+                    } catch (e: Exception) {
 
                     }
 
@@ -215,7 +207,7 @@ class AccountSettingsActivity : AppCompatActivity() {
     }
 
 
-    private fun showImageAttachMenu(){
+    private fun showImageAttachMenu() {
         val popupMenu = PopupMenu(this, binding.editProfilePp)
         popupMenu.menu.add(Menu.NONE, 0, 0, "Camera")
         popupMenu.menu.add(Menu.NONE, 1, 1, "Gallery")
@@ -224,12 +216,11 @@ class AccountSettingsActivity : AppCompatActivity() {
         popupMenu.setOnMenuItemClickListener { item ->
             val id = item.itemId
 
-            if (id==0) {
-            //camera clicked
+            if (id == 0) {
+                //camera clicked
                 pickImageCamera()
 
-            }
-            else if (id==1) {
+            } else if (id == 1) {
                 //gallery clicked
                 pickImageGallery()
 
@@ -259,16 +250,15 @@ class AccountSettingsActivity : AppCompatActivity() {
 
     private var cameraActivityResultLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult(),
-        ActivityResultCallback<ActivityResult> {result ->
-            if(result.resultCode == Activity.RESULT_OK){
-                val data =result.data
+        ActivityResultCallback<ActivityResult> { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data = result.data
 
 
 
                 binding.editProfilePp.setImageURI(imageUri)
-            }
-            else{
-                Toast.makeText(this,"Cancelled", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show()
             }
         }
     )

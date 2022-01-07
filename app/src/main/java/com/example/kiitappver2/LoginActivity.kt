@@ -10,7 +10,6 @@ import com.example.kiitappver2.databinding.ActivityLoginBinding
 
 
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_signup.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -23,12 +22,12 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.skipLogin.setOnClickListener{
+        binding.skipLogin.setOnClickListener {
             val intent = Intent(this, NoLoginActivity::class.java)
             startActivity(intent)
         }
 
-        binding.loginButton.setOnClickListener{
+        binding.loginButton.setOnClickListener {
             loginUser()
         }
     }
@@ -59,28 +58,26 @@ class LoginActivity : AppCompatActivity() {
 
                 val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
                 mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener{ task ->
-                        if(task.isSuccessful){
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
                             progressDialog.dismiss()
                             val intent = Intent(this, MainActivity::class.java)
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                             startActivity(intent)
                             finish()
-                        }
-                        else
-                        {
+                        } else {
                             progressDialog.dismiss()
                             val message = task.exception!!.toString()
                             Toast.makeText(this, "Error: $message", Toast.LENGTH_LONG).show()
                             FirebaseAuth.getInstance()
 
                         }
-                }
+                    }
             }
         }
     }
 
-    override fun onStart(){
+    override fun onStart() {
         super.onStart()
 
 //        if(FirebaseAuth.getInstance().currentUser != null){

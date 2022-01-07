@@ -79,7 +79,7 @@ class HomeFragment : Fragment() {
 
 
         binding.notes.setOnClickListener{
-            startActivity(Intent(context,NotesActivity::class.java))
+            startActivity(Intent(context,NoteActivity::class.java))
         }
 
         //Recent Events: view all
