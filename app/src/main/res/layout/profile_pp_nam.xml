@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/productsansbold"
-                    android:text="@string/ajay_khatri_chhetri"
+                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
@@ -42,7 +42,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/first_year_student"
+                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 

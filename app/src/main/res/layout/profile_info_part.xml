@@ -96,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/ajay_khatri_chhetri"
+                    android:text=""
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
             </LinearLayout>
@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/_21053264"
+                    android:text=""
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
             </LinearLayout>
@@ -184,7 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/_977_9867234454"
+                    android:text=""
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
             </LinearLayout>
@@ -228,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/tilottama_nepal"
+                    android:text=""
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
             </LinearLayout>
@@ -272,7 +272,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/scse"
+                    android:text=""
                     android:textSize="18sp"
                     android:textColor="#3d3d3d"/>
             </LinearLayout>
@@ -316,7 +316,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansregular"
-                    android:text="@string/_1st_stage"
+                    android:text=""
                     android:textColor="#3d3d3d"
                     android:textSize="18sp" />
             </LinearLayout>
