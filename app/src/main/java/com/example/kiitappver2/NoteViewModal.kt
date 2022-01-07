@@ -5,22 +5,19 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.launch
 
-@InternalCoroutinesApi
-class NoteViewClass(application: Application): AndroidViewModel(application) {
+class NoteViewModal(application: Application): AndroidViewModel(application) {
+    val allNotes: LiveData<List<Note>>
+    val repository: NoteRepository
 
-    private val allNotes: LiveData<List<Note>>
-    private val repository: NoteRepository
-
-    init {
+    init{
         val dao = NoteDatabase.getDatabase(application).getNotesDao()
         repository = NoteRepository(dao)
         allNotes = repository.allNotes
     }
 
-    fun deleteNote(note:Note) = viewModelScope.launch(Dispatchers.IO){
+    fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
         repository.delete(note)
     }
 
@@ -31,5 +28,6 @@ class NoteViewClass(application: Application): AndroidViewModel(application) {
     fun addNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
         repository.insert(note)
     }
+
 
 }

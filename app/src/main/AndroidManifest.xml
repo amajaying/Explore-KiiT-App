@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITAppVer2">
         <activity
+            android:name=".AddEditNoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".NotesActivity"
             android:exported="false" />
         <activity
