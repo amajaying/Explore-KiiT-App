@@ -1,14 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B9D8C4"
     tools:context=".notes.NoteFragment.CreateNoteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/createnotes_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/white_gray_border_tabs">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:id="@+id/back_button"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="-27dp"
+                        android:padding="20dp"
+                        android:src="@drawable/left_arrow" />
+
+                    <TextView
+                        android:id="@+id/header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/productsansbold"
+                        android:text="My Notes"
+                        android:textColor="#3d3d3d"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <EditText
+                android:id="@+id/noteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_shapr"
+                android:fontFamily="@font/productsansbold"
+                android:hint="Title"
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:textColor="#3d3d3d"
+                android:textColorHint="#3d3d3d" />
+
+            <EditText
+                android:id="@+id/noteDescription"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_shapr"
+                android:fontFamily="@font/productsansbold"
+                android:gravity="start"
+                android:textSize="18sp"
+                android:hint="Write your note here..."
+                android:padding="15dp"
+                android:textColor="#3d3d3d"
+                android:textColorHint="#3d3d3d" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="26dp"
+        android:backgroundTint="@color/priCol"
+        android:src="@drawable/ic_baseline_done_24"
+        app:rippleColor="@color/secCol" />
+
 
 </FrameLayout>
