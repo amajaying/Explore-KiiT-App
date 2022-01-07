@@ -31,6 +31,10 @@ class CreateNoteFragment : Fragment() {
         binding.saveNote.setOnClickListener {
             createNotes(it)
         }
+
+        binding.backButton.setOnClickListener {
+            Navigation.findNavController(it!!).navigate(R.id.action_createNoteFragment_to_noteHomeFragment)
+        }
         return binding.root
     }
 

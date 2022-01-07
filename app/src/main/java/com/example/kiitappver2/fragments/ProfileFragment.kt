@@ -1,6 +1,7 @@
 package com.example.kiitappver2.fragments
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -55,6 +56,12 @@ class ProfileFragment : Fragment() {
         }
 
 
+        binding.statsProfile.gotoPortal.setOnClickListener {
+            val uri = Uri.parse("https://kiitportal.kiituniversity.net/irj/portal/")
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
 
         return binding.root
 

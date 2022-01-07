@@ -110,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
             <TextView
@@ -144,7 +144,7 @@
                 app:cpb_background_progressbar_color="#CFCFCF"
                 app:cpb_background_progressbar_color_direction="right_to_left"
                 app:cpb_background_progressbar_width="8dp"
-                app:cpb_progress="75"
+                app:cpb_progress="0"
                 app:cpb_progress_direction="to_right"
                 app:cpb_progress_max="100"
                 app:cpb_progressbar_color_end="@color/secCol"
@@ -159,9 +159,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/productsansbold"
-                android:text="@string/_75"
+                android:text="@string/_0"
                 android:textColor="#3d3d3d"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
         </RelativeLayout>
     </LinearLayout>
 

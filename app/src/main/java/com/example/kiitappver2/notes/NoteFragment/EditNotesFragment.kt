@@ -14,6 +14,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.kiitappver2.R
 import com.example.kiitappver2.ViewModel.NotesViewModel
 import com.example.kiitappver2.databinding.FragmentEditNotesBinding
+import com.example.kiitappver2.fragments.HomeFragment
 import com.example.kiitappver2.model.Notes
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
@@ -39,6 +40,9 @@ class EditNotesFragment : Fragment() {
             updateNotes(it)
         }
 
+        binding.backButton.setOnClickListener {
+            Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_noteHomeFragment)
+        }
 
 
         binding.deletebtn.setOnClickListener {
@@ -52,6 +56,7 @@ class EditNotesFragment : Fragment() {
                 viewmodel.deleteNotes(notes.data.id!!)
                 bottomSheet.dismiss()
                 Toast.makeText(context,"Note Deleted Successfully!", Toast.LENGTH_SHORT).show()
+//                Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_noteHomeFragment)
             }
             textviewNo?.setOnClickListener {
                 bottomSheet.dismiss()
@@ -87,6 +92,7 @@ class EditNotesFragment : Fragment() {
 
 
     }
+
 
 
 }

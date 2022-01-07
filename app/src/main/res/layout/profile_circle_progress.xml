@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="@font/productsansbold"
-        android:text="@string/_75"
+        android:text="@string/_0"
         android:textColor="#3d3d3d"
         android:textSize="22sp" />
 
