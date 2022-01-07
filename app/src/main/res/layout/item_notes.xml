@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/notesTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansbold"
@@ -28,15 +30,17 @@
                 android:textColor="#3d3d3d"/>
 
             <TextView
+                android:id="@+id/notesDetail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:fontFamily="@font/productsansregular"
                 android:layout_marginTop="5dp"
-                android:text="@string/founder_details"
+                android:text="@string/subtitle"
                 android:textSize="17sp"
                 android:textColor="#4E4D4D"/>
 
             <TextView
+                android:id="@+id/notesDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansbold"

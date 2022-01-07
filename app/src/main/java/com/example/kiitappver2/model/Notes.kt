@@ -1,4 +1,4 @@
-package com.example.kiitappver2.Model
+package com.example.kiitappver2.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

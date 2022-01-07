@@ -30,7 +30,7 @@
         android:id="@+id/editNotesFragment"
         android:name="com.example.kiitappver2.notes.NoteFragment.EditNotesFragment"
         android:label="fragment_edit_notes"
-        tools:layout="@layout/fragment_edit_notes" >
+        tools:layout="@layout/fragment_edit_notes">
         <action
             android:id="@+id/action_editNotesFragment_to_noteHomeFragment"
             app:destination="@id/noteHomeFragment" />

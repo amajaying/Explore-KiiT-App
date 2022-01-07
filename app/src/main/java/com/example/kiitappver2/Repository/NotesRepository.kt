@@ -2,7 +2,7 @@ package com.example.kiitappver2.Repository
 
 import androidx.lifecycle.LiveData
 import com.example.kiitappver2.Dao.NotesDao
-import com.example.kiitappver2.Model.Notes
+import com.example.kiitappver2.model.Notes
 
 class NotesRepository(val dao: NotesDao) {
 

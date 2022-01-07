@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.example.kiitappver2.Database.NotesDatabase
-import com.example.kiitappver2.Model.Notes
+import com.example.kiitappver2.model.Notes
 import com.example.kiitappver2.Repository.NotesRepository
 
 class NotesViewModel(application: Application) : AndroidViewModel(application) {

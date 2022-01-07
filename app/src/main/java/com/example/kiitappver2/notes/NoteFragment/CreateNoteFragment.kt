@@ -2,19 +2,17 @@ package com.example.kiitappver2.notes.NoteFragment
 
 import android.os.Bundle
 import android.text.format.DateFormat
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.example.kiitappver2.Model.Notes
+import androidx.navigation.Navigation
+import com.example.kiitappver2.model.Notes
 import com.example.kiitappver2.R
 import com.example.kiitappver2.ViewModel.NotesViewModel
 import com.example.kiitappver2.databinding.FragmentCreateNoteBinding
-import com.google.gson.internal.bind.util.ISO8601Utils.format
-import kotlinx.android.synthetic.main.soc_row_category.*
 import java.util.*
 
 
@@ -51,6 +49,8 @@ class CreateNoteFragment : Fragment() {
         viewmodel.addNotes(data)
 
         Toast.makeText(context,"Note Created Successfully!", Toast.LENGTH_SHORT).show()
+
+        Navigation.findNavController(it!!).navigate(R.id.action_createNoteFragment_to_noteHomeFragment)
 
 
 

@@ -2,7 +2,7 @@ package com.example.kiitappver2.Dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.kiitappver2.Model.Notes
+import com.example.kiitappver2.model.Notes
 
 
 @Dao

@@ -10,5 +10,7 @@
     <color name="priCol">#0CA542</color>
     <color name="secCol">#01AEE6</color>
     <color name="gray">#bfbfbf</color>
+    <color name="light_red">#FD9494</color>
+    <color name="light_blue">#A4E4F9</color>
 
 </resources>

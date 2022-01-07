@@ -134,5 +134,6 @@
     <string name="my_notes">My Notes</string>
     <string name="note_title">Note Title</string>
     <string name="time_stamp">Time Stamp</string>
+    <string name="subtitle">This is a subtitle section where not many lines will be but nice number of lines will be so that it will look nice!</string>
 
 </resources>
