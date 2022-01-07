@@ -70,7 +70,7 @@
                 android:textSize="20sp"
                 android:padding="15dp"
                 android:textColor="#3d3d3d"
-                android:textColorHint="#3d3d3d" />
+                android:textColorHint="#7A7A7A" />
 
             <EditText
                 android:id="@+id/noteDescription"
@@ -78,13 +78,13 @@
                 android:layout_height="350dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_shapr"
-                android:fontFamily="@font/productsansbold"
+                android:fontFamily="@font/productsansregular"
                 android:gravity="start"
                 android:textSize="18sp"
                 android:hint="Write your note here..."
                 android:padding="15dp"
                 android:textColor="#3d3d3d"
-                android:textColorHint="#3d3d3d" />
+                android:textColorHint="#7a7a7a" />
 
 
         </LinearLayout>
