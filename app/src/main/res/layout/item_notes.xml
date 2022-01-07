@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#A4E4F9"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:text="Explore KiiT"
+                android:textSize="22sp"
+                android:maxLines="1"
+                android:textColor="#3d3d3d"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansregular"
+                android:layout_marginTop="5dp"
+                android:text="@string/founder_details"
+                android:textSize="17sp"
+                android:textColor="#4E4D4D"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:text="7 January 2022"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:textColor="#3d3d3d"/>
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
