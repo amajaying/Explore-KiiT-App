@@ -48,7 +48,9 @@
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp">
 
-            <include layout="@layout/profile_circle_progress" />
+            <include
+                android:id="@+id/circleProgress"
+                layout="@layout/profile_circle_progress" />
 
         </RelativeLayout>
 

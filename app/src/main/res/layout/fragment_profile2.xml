@@ -72,7 +72,9 @@
                     android:layout_height="200dp"
                     android:layout_width="wrap_content"/>
 
-                <include layout="@layout/profile_attd_stats"
+                <include
+                    android:id="@+id/statsProfile"
+                    layout="@layout/profile_attd_stats"
 
                     android:layout_width="wrap_content"
                     android:layout_marginTop="15dp"

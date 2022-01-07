@@ -22,12 +22,13 @@
         app:cpb_round_border="false"/>
 
     <TextView
-        android:layout_centerInParent = "true"
+        android:id="@+id/percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#3d3d3d"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/productsansbold"
         android:text="@string/_75"
-        android:textSize="22sp"
-        android:fontFamily="@font/productsansbold"/>
+        android:textColor="#3d3d3d"
+        android:textSize="22sp" />
 
 </RelativeLayout>

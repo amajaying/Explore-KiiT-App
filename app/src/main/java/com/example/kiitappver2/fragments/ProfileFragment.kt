@@ -16,9 +16,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-
-
-
+import kotlinx.android.synthetic.main.fragment_attendance2.view.*
+import kotlinx.android.synthetic.main.fragment_profile2.*
+import kotlinx.android.synthetic.main.profile_attd_stats.view.*
 
 
 class ProfileFragment : Fragment() {
@@ -55,6 +55,7 @@ class ProfileFragment : Fragment() {
         }
 
 
+
         return binding.root
 
 
@@ -75,6 +76,8 @@ class ProfileFragment : Fragment() {
                     val school = "${snapshot.child("school").value}"
                     val semester = "${snapshot.child("semester").value}"
                     val uid = "${snapshot.child("uid").value}"
+                    val progress = "${snapshot.child("progress").value}"
+                    val percent = "${snapshot.child("percent").value}"
 
                     //set Data
 
@@ -86,6 +89,8 @@ class ProfileFragment : Fragment() {
                     binding.profileInfo.schoolinfo.text = school
                     binding.profileInfo.semester.text = semester
                     binding.profileTop.semester1.text = semester
+                    binding.statsProfile.circleProgress.percent.text = percent
+                    binding.statsProfile.circleProgress.circularProgressBar.progress = progress.toFloat()
 
                     //setting image
                     try {
