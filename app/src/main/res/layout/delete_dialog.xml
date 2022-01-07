@@ -18,7 +18,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Are you sure you want to\ndelete This Note?"
+        android:text="Are you sure you want to\ndelete this Note?"
         android:fontFamily="@font/productsansbold"
         android:gravity="center"
         android:textSize="18sp"
@@ -26,6 +26,7 @@
         />
 
     <TextView
+        android:id="@+id/nobtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No"
@@ -41,6 +42,7 @@
         />
 
         <TextView
+            android:id="@+id/yesbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Yes"

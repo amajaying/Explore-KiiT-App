@@ -2,12 +2,10 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id("androidx.navigation.safeargs.kotlin")
+    id "androidx.navigation.safeargs.kotlin"
+    id "org.jetbrains.kotlin.android.extensions"
+    id "kotlin-android-extensions"
 }
-
-
-apply plugin: 'kotlin-android-extensions'
-
 
 android {
     compileSdk 32
@@ -21,7 +19,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    androidExtensions {
+        experimental = true
+    }
     buildTypes {
         release {
             minifyEnabled false

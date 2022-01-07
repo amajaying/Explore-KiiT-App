@@ -7,7 +7,9 @@
         <entry key="..\:/App/Explore-KiiT/app/src/main/res/layout/activity_founder.xml" value="0.1911231884057971" />
         <entry key="..\:/App/Explore-KiiT/app/src/main/res/layout/activity_societies.xml" value="0.22447916666666667" />
         <entry key="..\:/App/Explore-KiiT/app/src/main/res/layout/founder_socials.xml" value="0.22447916666666667" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/delete_sheet.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/edit_text_shapr.xml" value="0.15608108108108107" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/no_btm.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/profile_bg_top.xml" value="0.12708333333333333" />
@@ -30,7 +32,7 @@
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_attendance2.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_attendance3.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_create_note.xml" value="0.14560810810810812" />
-        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_edit_notes.xml" value="0.1" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_edit_notes.xml" value="0.33" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_home2.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_note_home.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_note_home2.xml" value="0.14560810810810812" />
