@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/noteHomeFragment">
+
+    <fragment
+        android:id="@+id/createNoteFragment"
+        android:name="com.example.kiitappver2.notes.NoteFragment.CreateNoteFragment"
+        android:label="fragment_create_note"
+        tools:layout="@layout/fragment_create_note" >
+        <action
+            android:id="@+id/action_createNoteFragment_to_noteHomeFragment"
+            app:destination="@id/noteHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteHomeFragment"
+        android:name="com.example.kiitappver2.notes.NoteFragment.NoteHomeFragment"
+        android:label="fragment_note_home2"
+        tools:layout="@layout/fragment_note_home2" >
+        <action
+            android:id="@+id/action_noteHomeFragment_to_editNotesFragment"
+            app:destination="@id/editNotesFragment" />
+        <action
+            android:id="@+id/action_noteHomeFragment_to_createNoteFragment"
+            app:destination="@id/createNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNotesFragment"
+        android:name="com.example.kiitappver2.notes.NoteFragment.EditNotesFragment"
+        android:label="fragment_edit_notes"
+        tools:layout="@layout/fragment_edit_notes" >
+        <action
+            android:id="@+id/action_editNotesFragment_to_noteHomeFragment"
+            app:destination="@id/noteHomeFragment" />
+    </fragment>
+</navigation>

@@ -7,25 +7,26 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/kiit_login_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/kiit_login_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITAppVer2">
         <activity
-            android:name=".AddEditNoteActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NotesActivity"
-            android:exported="false" />
+            android:name=".NoteActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".KnowKiitActivity"
             android:exported="false" />
         <activity
             android:name=".FounderActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ViewSocietyActivity"
             android:exported="false" />
         <activity
             android:name=".SocietiesActivity"
@@ -36,11 +37,7 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SignupActivity"

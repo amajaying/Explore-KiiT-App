@@ -31,7 +31,6 @@
     <string name="username">username</string>
     <string name="home">Home</string>
     <string name="notification">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">About</string>
     <string name="feedback">Feedback</string>
@@ -133,5 +132,7 @@
     <string name="mission">Mission</string>
     <string name="ranking_amp_nrecognition"><![CDATA[Ranking & \n Recognition]]></string>
     <string name="my_notes">My Notes</string>
+    <string name="note_title">Note Title</string>
+    <string name="time_stamp">Time Stamp</string>
 
 </resources>
