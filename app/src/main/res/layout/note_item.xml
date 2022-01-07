@@ -19,6 +19,7 @@
             android:fontFamily="@font/productsansbold"
             android:padding="4dp"
             android:text="Note Title"
+            android:layout_toStartOf="@id/deleteNote"
             android:textColor="@color/secCol"
             android:textSize="18sp" />
 
@@ -30,7 +31,21 @@
             android:layout_margin="4dp"
             android:padding="4dp"
             android:text="Time Stamp"
-            android:textColor="#3d3d3d"
+            android:layout_toStartOf="@id/deleteNote"
+            android:textColor="#3d3d3d"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteNote"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:tint="@color/priCol"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:padding="4dp"/>
+
+
 
     </RelativeLayout>
 

@@ -49,7 +49,12 @@
         android:id="@+id/notesRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout" />
+        android:layout_below="@id/appBarLayout"
+        tools:listitem="@layout/note_item"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        />
     
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
