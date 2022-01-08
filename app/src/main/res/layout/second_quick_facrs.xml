@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_bg_top"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_facts"
+        android:textSize="35sp"
+        android:fontFamily="@font/productsansbold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_23"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/world_class_campuses"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sports_complexes_with_swimming_pools"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/line1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food Courts"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="45dp"
+                android:padding="15dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Sq. km. Academic\nTownship"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

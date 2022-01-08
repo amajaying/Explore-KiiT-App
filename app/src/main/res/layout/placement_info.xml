@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_bg_top"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/productsansbold"
+        android:text="2022 Highlights"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Companies"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_marginStart="65dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4200"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Offers"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/line1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 40 Lakh"
+                    android:textSize="45sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansbold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Highest Salary Offered"
+                    android:textSize="20sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

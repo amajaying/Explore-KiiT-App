@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlacementActivity"
+    android:background="#F6F5F5">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/placement_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/white_gray_border_tabs">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="-27dp"
+                    android:padding="20dp"
+                    android:src="@drawable/left_arrow" />
+
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/productsansbold"
+                    android:text="Placements"
+                    android:textColor="#3d3d3d"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarLayout">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bg_founder"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placements_bg" />
+
+            <include
+                layout="@layout/placement_info"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/placementText"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/productsansregular"
+                android:textSize="20sp"
+                android:textColor="#3d3d3d"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/learnmore"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Learn More"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/priCol"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

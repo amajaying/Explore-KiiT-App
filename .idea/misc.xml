@@ -16,13 +16,18 @@
         <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/white_bg.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/drawable/yes_btn.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/absent.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/academics_info.xml" value="0.22" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/academicstop.xml" value="0.12" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_academics.xml" value="0.1" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_account_settings.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_add_edit_note.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_campus_life.xml" value="0.1" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_founder.xml" value="0.1" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_know_kiit.xml" value="0.1" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_main.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_note.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_notes.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_placement.xml" value="0.16" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/activity_societies.xml" value="0.19953703703703704" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/current.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/default_vi.xml" value="0.14560810810810812" />
@@ -37,9 +42,12 @@
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_note_home.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_note_home2.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/fragment_profile2.xml" value="0.1" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/friendly.xml" value="0.1" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/item_notes.xml" value="0.18" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/life_at_kiit.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/mission.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/note_item.xml" value="0.1" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/placement_info.xml" value="0.1" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/present.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/profile_attd_stats.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/profile_circle_progress.xml" value="0.14560810810810812" />
@@ -47,6 +55,7 @@
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/profile_pp_nam.xml" value="0.10689890710382513" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/quick_facts.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/ranking.xml" value="0.14560810810810812" />
+        <entry key="..\:/App/KiiT.App/app/src/main/res/layout/second_quick_facrs.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiT.App/app/src/main/res/layout/vision.xml" value="0.14560810810810812" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/events_bg.xml" value="0.15608108108108107" />
         <entry key="..\:/App/KiiTAppV2/app/src/main/res/drawable/green_bg.xml" value="0.15608108108108107" />

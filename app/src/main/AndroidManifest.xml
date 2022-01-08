@@ -12,14 +12,23 @@
         android:roundIcon="@drawable/kiit_login_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.KIITAppVer2">
+        <activity
+            android:name=".PlacementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcademicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CampusLifeActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
         <activity
             android:name=".NoteActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".KnowKiitActivity"
             android:exported="false" />

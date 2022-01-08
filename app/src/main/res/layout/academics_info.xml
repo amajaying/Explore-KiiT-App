@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_bg_top"
+    android:padding="15dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2500"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Faculty"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_marginStart="30dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Academic Programmes"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/line1"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_marginStart="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_30_000"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/students"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_marginStart="55dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_16"
+                    android:textSize="35sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Schools"
+                    android:textSize="15sp"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/productsansregular"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
