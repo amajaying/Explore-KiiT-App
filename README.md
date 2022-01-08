@@ -4,6 +4,12 @@
 
 *"An app to simplify the complicated website navigation and keep track of Attendance"*
 
+```
+Use the following credential to login into the app
+email = user@user.com
+password = user123
+```
+
 <hr>
 
 **Problem Statement:**
