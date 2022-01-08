@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
 
             checkUser()
 
-        },1000)
+        },900)
     }
 
     private fun checkUser() {
