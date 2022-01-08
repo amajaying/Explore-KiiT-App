@@ -75,6 +75,7 @@
 
         <include layout="@layout/ranking"/>
 
+
         <Button
             android:id="@+id/learnmore"
             android:layout_width="match_parent"

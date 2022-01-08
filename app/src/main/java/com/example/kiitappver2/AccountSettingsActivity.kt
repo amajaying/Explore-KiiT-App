@@ -17,7 +17,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
 import com.example.kiitappver2.databinding.ActivityAccountSettingsBinding
 
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -118,13 +117,12 @@ class AccountSettingsActivity : AppCompatActivity() {
 
         val reference = getInstance().getReference(filePathAndName)
         reference.putFile(imageUri!!)
-            .addOnSuccessListener { taskSnapshot ->
-                val uriTask: Task<Uri> = taskSnapshot.storage.downloadUrl
-//                while (!uriTask.isSuccessful);
-                val uploadedImageUrl = "${uriTask.result}"
+            .addOnSuccessListener { t ->
+                t.metadata!!.reference!!.downloadUrl.addOnCompleteListener{task ->
+                    imageUri = task.result!!
 
-                updateProfile(uploadedImageUrl)
-
+                    updateProfile(imageUri.toString())
+                }
             }
             .addOnFailureListener { e ->
                 progressDialog.dismiss()

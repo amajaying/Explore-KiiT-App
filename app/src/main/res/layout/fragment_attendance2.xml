@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.AttendanceFragment"
     android:background="#F6F5F5"
-    android:paddingBottom="70dp">
+    android:paddingBottom="70dp"
+    tools:context=".fragments.AttendanceFragment">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/appBarLayout">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/attendance_toolbar"
@@ -28,12 +28,11 @@
                     android:id="@+id/header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Attendance"
-                    android:fontFamily="@font/productsansbold"
-                    android:textColor="#3d3d3d"
                     android:layout_centerInParent="true"
-                    android:textSize="20sp"
-                    />
+                    android:fontFamily="@font/productsansbold"
+                    android:text="Attendance"
+                    android:textColor="#3d3d3d"
+                    android:textSize="20sp" />
 
 
             </RelativeLayout>
@@ -45,56 +44,55 @@
         android:id="@+id/profileImg"
         android:layout_width="105dp"
         android:layout_height="105dp"
-        app:cardCornerRadius="10dp"
+        android:layout_below="@id/appBarLayout"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         android:innerRadius="0dp"
         android:shape="ring"
-        android:layout_below="@id/appBarLayout"
-        >
+        app:cardCornerRadius="10dp">
+
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/profileImg1"
             android:layout_width="105dp"
             android:layout_height="105dp"
-            android:src="@drawable/default_profile"
-            />
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile" />
     </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/appBarLayout"
-                android:layout_marginTop="45dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/profileImg"
-                android:orientation="vertical"
-                android:layout_alignParentEnd="true"
-                >
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toEndOf="@id/profileImg"
+        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/studentname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/studentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                    android:fontFamily="@font/productsansbold"
-                    android:text=""
-                    android:textColor="@color/priCol"
-                    android:textSize="24sp" />
+            android:fontFamily="@font/productsansbold"
+            android:text=""
+            android:textColor="@color/priCol"
+            android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/semester"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/semester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/productsansregular"
-                    android:text=""
-                    android:textColor="#3d3d3d"
-                    android:textSize="18sp" />
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/productsansregular"
+            android:text=""
+            android:textColor="#3d3d3d"
+            android:textSize="18sp" />
 
-            </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -167,12 +165,12 @@
 
 
     <org.naishadhparmar.zcustomcalendar.CustomCalendar
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
         android:id="@+id/calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" />
 
 
 </RelativeLayout>

@@ -63,6 +63,7 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
+
         return binding.root
 
 

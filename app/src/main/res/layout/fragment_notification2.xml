@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.NotificationFragment"
-    android:background="#F6F5F5">
+    android:background="#F6F5F5"
+    android:paddingBottom="60dp">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

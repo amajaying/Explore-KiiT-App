@@ -59,6 +59,7 @@
         android:layout_below="@id/appBarLayout">
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/edit_profile_pp"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:src="@drawable/default_profile"

@@ -20,6 +20,7 @@ class KnowKiitActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+
         binding.learnmore.setOnClickListener {
             val uri = Uri.parse("https://kiit.ac.in/about/#")
 

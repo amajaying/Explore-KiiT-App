@@ -23,7 +23,7 @@ class NotificationFragment : Fragment() {
 
     private lateinit var notiTitle: Array<String>
     private lateinit var notiDetail: Array<String>
-    private lateinit var notiImage : Array<Int>
+    private lateinit var notiImage: Array<Int>
 
     private lateinit var binding: FragmentNotification2Binding
 
@@ -37,19 +37,24 @@ class NotificationFragment : Fragment() {
 
 
         notiTitle = arrayOf(
-            "Winter Vacation",
-            "Winter Vacation"
+            "KISS-DU Organizes Webinar On ‘Greening Of Romanticism And Romanticization Of Greenness: A Reading Of Wordsworth And Tagore From Eco-Theological Perspective’",
+            "76 Professors Promoted",
+"KIIT Wins ‘THE Awards Asia 2021’In ‘Leadership And Management Team Of The Year’ Category"
+
         )
 
 
         notiDetail = arrayOf(
-            "It is to be notified that winter vacation from Dec 21 to Jan2 is provided to the students.",
-            "It is to be notified that winter vacation from Dec 21 to Jan2 is provided to the students."
-        )
+            "The School of Comparative Tribal Language and Literature (English Programme) at KISS Deemed to be University organized a webinar on ‘Greening of Romanticism and Romanticization of Greenness: A Reading of Wordsworth and Tagore from Eco-theological Perspective’ on 28th December 2021. Professor Goutam Buddha Sural, Department of English, Bankura University, was invited as the distinguished speaker.",
+            "Prof. Sasmita Samanta, Vice Chancellor, KIIT Deemed to be University handed over the letters of promotion to as many as 76 eligible professors of the KIIT Deemed to be University at a Special Ceremony on 31st December, 2021.",
+"Kalinga Institute of Industrial Technology (KIIT) Deemed to be University, Bhubaneswar has been awarded ‘THE Awards Asia’ Leadership and Management Team of the Year for its phenomenal pandemic response and relief work. The award was announced by the Times Higher Education (THE) on 14th December 2021. KIIT is the only University from India and also the only university in Asia to get this award"
+            )
 
         notiImage = arrayOf(
-            R.drawable.img_society_one,
-            R.drawable.img_society_one
+            R.drawable.event1,
+            R.drawable.event2,
+            R.drawable.event3
+
         )
 
 
@@ -61,17 +66,17 @@ class NotificationFragment : Fragment() {
         getUserData()
 
 
-         binding.recyclerViewNotification.setOnClickListener {
+        binding.recyclerViewNotification.setOnClickListener {
 
-             Toast.makeText(context, "Clicked!", Toast.LENGTH_SHORT).show()
-         }
+            Toast.makeText(context, "Clicked!", Toast.LENGTH_SHORT).show()
+        }
 
 
         return binding.root
     }
 
     private fun getUserData() {
-        for(i in notiImage.indices){
+        for (i in notiImage.indices) {
             val notification = Notification(notiTitle[i], notiDetail[i], notiImage[i])
             notiArrayList.add(notification)
         }
