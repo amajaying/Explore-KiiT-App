@@ -18,7 +18,6 @@ class NoteActivity : AppCompatActivity() {
 
         navController=findNavController(R.id.fragmentContainerView)
 
-//        setupActionBarWithNavController(navController)
     }
 
     override fun onNavigateUp(): Boolean {

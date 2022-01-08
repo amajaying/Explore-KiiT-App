@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,6 +15,7 @@ import com.example.kiitappver2.MainActivity
 import com.example.kiitappver2.R
 import com.example.kiitappver2.ViewModel.NotesViewModel
 import com.example.kiitappver2.databinding.FragmentNoteHome2Binding
+import com.example.kiitappver2.fragments.HomeFragment
 import com.example.kiitappver2.notes.NoteAdapter.NotesAdapter
 
 
@@ -36,14 +39,22 @@ class NoteHomeFragment : Fragment() {
 
         binding.btnAddNotes.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_noteHomeFragment_to_createNoteFragment)
+
         }
 
         binding.backButton.setOnClickListener {
             startActivity(Intent(context,MainActivity::class.java))
+
         }
 
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(viewLifecycleOwner,object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    requireActivity().finish()
+                }
+            }
+            )
         return binding.root
-
     }
-
 }

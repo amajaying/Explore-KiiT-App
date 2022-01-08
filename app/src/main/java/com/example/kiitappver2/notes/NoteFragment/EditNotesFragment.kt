@@ -1,5 +1,6 @@
 package com.example.kiitappver2.notes.NoteFragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
 import androidx.fragment.app.Fragment
@@ -10,11 +11,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.kiitappver2.R
 import com.example.kiitappver2.ViewModel.NotesViewModel
 import com.example.kiitappver2.databinding.FragmentEditNotesBinding
-import com.example.kiitappver2.fragments.HomeFragment
 import com.example.kiitappver2.model.Notes
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
@@ -24,11 +25,11 @@ class EditNotesFragment : Fragment() {
 
     val notes by navArgs<EditNotesFragmentArgs>()
     lateinit var binding: FragmentEditNotesBinding
-    val viewmodel: NotesViewModel by viewModels()
+    private val viewmodel: NotesViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding= FragmentEditNotesBinding.inflate(layoutInflater,container,false)
 
@@ -42,6 +43,7 @@ class EditNotesFragment : Fragment() {
 
         binding.backButton.setOnClickListener {
             Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_noteHomeFragment)
+
         }
 
 
@@ -56,7 +58,9 @@ class EditNotesFragment : Fragment() {
                 viewmodel.deleteNotes(notes.data.id!!)
                 bottomSheet.dismiss()
                 Toast.makeText(context,"Note Deleted Successfully!", Toast.LENGTH_SHORT).show()
-//                Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_noteHomeFragment)
+                Navigation.findNavController(binding.root)
+                    .navigate(R.id.action_editNotesFragment_to_noteHomeFragment)
+
             }
             textviewNo?.setOnClickListener {
                 bottomSheet.dismiss()
@@ -91,7 +95,9 @@ class EditNotesFragment : Fragment() {
 
 
 
+
     }
+
 
 
 

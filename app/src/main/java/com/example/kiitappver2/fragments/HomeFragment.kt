@@ -52,6 +52,7 @@ class HomeFragment : Fragment() {
 
             val intent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(intent)
+
         }
         //Virtual Button Finish
 

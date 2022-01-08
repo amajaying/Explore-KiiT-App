@@ -33,7 +33,9 @@
         tools:layout="@layout/fragment_edit_notes">
         <action
             android:id="@+id/action_editNotesFragment_to_noteHomeFragment"
-            app:destination="@id/noteHomeFragment" />
+            app:destination="@id/noteHomeFragment"
+            app:popUpTo="@id/noteHomeFragment"
+            app:popUpToInclusive="true"/>
         <argument
             android:name="data"
             app:argType="com.example.kiitappver2.model.Notes" />

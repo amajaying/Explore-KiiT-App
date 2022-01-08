@@ -3,8 +3,11 @@ package com.example.kiitappver2.notes.NoteAdapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kiitappver2.R
 import com.example.kiitappver2.model.Notes
 import com.example.kiitappver2.databinding.ItemNotesBinding
 import com.example.kiitappver2.notes.NoteFragment.NoteHomeFragmentDirections
@@ -38,6 +41,8 @@ class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) :
 
 
     }
+
+
 
     override fun getItemCount() = notesList.size
 
