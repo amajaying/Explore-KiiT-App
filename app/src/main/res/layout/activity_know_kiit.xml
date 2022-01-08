@@ -75,6 +75,18 @@
 
         <include layout="@layout/ranking"/>
 
+        <Button
+            android:id="@+id/learnmore"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Learn More"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/priCol"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"/>
 
 
 

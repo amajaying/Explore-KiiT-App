@@ -74,6 +74,7 @@
                 android:layout_width="wrap_content" />
 
             <include
+                android:id="@+id/socials"
                 layout="@layout/founder_socials"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

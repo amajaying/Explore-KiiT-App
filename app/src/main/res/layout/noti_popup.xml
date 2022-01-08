@@ -4,11 +4,11 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardviewNoti"
-    app:cardBackgroundColor="#E8EAE9"
+    app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:layout_gravity="center"
+    android:layout_marginTop="8dp"
     >
 
     <LinearLayout
@@ -33,9 +33,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/notiTitle"
+            android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:fontFamily="@font/productsansbold"
-            android:textColor="#3d3d3d"
+            android:textColor="@color/priCol"
             android:textSize="24sp"/>
 
         <TextView
@@ -50,17 +51,6 @@
             android:layout_marginTop="8dp"
             />
 
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Close"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:backgroundTint="@color/priCol"
-
-            android:layout_marginTop="30dp"
-            android:textColor="@color/white"/>
 
 
             </LinearLayout>

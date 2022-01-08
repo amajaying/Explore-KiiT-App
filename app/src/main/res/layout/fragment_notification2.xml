@@ -46,6 +46,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/appBarLayout"
         android:layout_margin="5dp"
-        tools:listitem="@layout/cardview_notification"/>
+        tools:listitem="@layout/noti_popup"/>
 
 </RelativeLayout>

@@ -61,9 +61,12 @@ class NotificationFragment : Fragment() {
         getUserData()
 
 
-         binding.recyclerViewNotification.cardviewNoti.setOnClickListener {
+         binding.recyclerViewNotification.setOnClickListener {
+
              Toast.makeText(context, "Clicked!", Toast.LENGTH_SHORT).show()
          }
+
+
         return binding.root
     }
 

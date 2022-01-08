@@ -13,7 +13,7 @@ import com.example.kiitappver2.Notification
 class NotificationAdapter(private val notiList:ArrayList<Notification>):RecyclerView.Adapter<NotificationAdapter.NotiViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotiViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.cardview_notification,parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.noti_popup,parent,false)
         return NotiViewHolder(itemView)
     }
 
