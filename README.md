@@ -80,7 +80,7 @@ This App has a very simple and interactive interface which helps the students na
 
 <br>
 This app is currently in the prototype phase and in order to start using this app in real, APIs integration is a must.
-You can access<br> the <a href="https://drive.google.com/file/d/1k2sPD8lznFT6UlyoW8LNsb0H-qaxWyJ3/view?usp=sharing">apk file</a> or check our Codebase on <a href="https://github.com/amajaying/Explore-KiiT-App">Github.</a>
+You can access the <a href="https://drive.google.com/file/d/1k2sPD8lznFT6UlyoW8LNsb0H-qaxWyJ3/view?usp=sharing">apk file</a> or check our Codebase on <a href="https://github.com/amajaying/Explore-KiiT-App">Github.</a>
 
 We can collaborate with KIIT University and integrate the SAP portal’s API to the app and make effective use of the app.
 
