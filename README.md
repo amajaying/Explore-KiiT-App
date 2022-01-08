@@ -85,3 +85,9 @@ You can access the <a href="https://drive.google.com/file/d/1k2sPD8lznFT6UlyoW8L
 We can collaborate with KIIT University and integrate the SAP portal’s API to the app and make effective use of the app.
 
 In the future, we can add the subject-based attendance tracking system which is right now is available on the KiiT Portal site. Also, we can add the class-reminder feature which can be useful to all the students. Also, we can add separate sections for notification from teachers and university administration. We can do modifications to enhance the UI/UX.
+
+
+```
+Version: 1.0.0
+Released on: 8th January, 2022
+```
