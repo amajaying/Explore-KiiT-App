@@ -95,12 +95,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/attd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profileImg"
         android:layout_marginTop="50dp"
         android:background="@color/white"
-
         android:orientation="horizontal"
         android:padding="20dp">
 
@@ -168,9 +168,9 @@
         android:id="@+id/calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/attd"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp" />
+        android:layout_marginStart="15dp" />
 
 
 </RelativeLayout>
