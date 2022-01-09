@@ -56,7 +56,7 @@ This makes information accessible to every student at their fingertip.
 
 
 
-**Additional Features:**
+**Additional Useful Features:**
 
 <br>
 <img src="https://github.com/amajaying/KiiT.App/blob/main/ScreenShots/app%204.png">
