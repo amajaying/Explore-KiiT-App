@@ -99,4 +99,6 @@ In the future, we can add the subject-based attendance tracking system which is 
 ```
 Version: 1.0.0
 Released on: 8th January, 2022
+This version is only compatible with Light Mode.
+In further updates, we will make it compatible with both light and dark mode.
 ```
