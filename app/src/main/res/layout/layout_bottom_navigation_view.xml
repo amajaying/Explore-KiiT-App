@@ -15,7 +15,9 @@
             android:background="@drawable/white_gray_border_bottom"
             app:menu="@menu/bottom_navigation_menu"
             app:itemRippleColor="@color/priCol"
-            app:labelVisibilityMode="labeled"/>
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="#3d3d3d"
+            app:itemIconTint="#3d3d3d"/>
     </RelativeLayout>
 
 
