@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.kiitappwithinstaclone"
+        applicationId "com.example.kiitappver2"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -119,4 +119,5 @@ dependencies {
 
     apply plugin: 'com.google.gms.google-services'
 
+    implementation 'androidx.work:work-runtime:2.7.1'
 }
